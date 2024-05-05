@@ -23,7 +23,7 @@ let common = `<div class="nav">
                   <li class="li"><a class="link langlinks" href="../HTML/html1.html">HTML</a></li>
                   <li class="li"><a class="link langlinks" href="../CSS/css1.html">CSS</a></li>
                   <li class="li"><a class="link langlinks" href="../JS/js1.html">JavaScript</a></li>
-                  <li class="li"><a class="link langlinks" href="python1.html">Python</a></li>
+                  <li class="li"><a class="link langlinks" href="../PYTHON/python1.html">Python</a></li>
             </ul>
       </div>`
 document.body.insertAdjacentHTML('afterbegin',common)
