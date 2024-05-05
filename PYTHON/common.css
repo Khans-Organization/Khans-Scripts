@@ -1,0 +1,12 @@
+main {
+      width: 80vw;
+      margin: auto;
+}
+
+main p {
+      padding: 20px 0;
+}
+
+.output img {
+      padding: 20px 0;
+}
