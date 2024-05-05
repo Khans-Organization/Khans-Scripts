@@ -1,5 +1,5 @@
 
-document.body.querySelector('#ham').addEventListener('click',()=>{
+document.body.querySelector('#ham1').addEventListener('click',()=>{
      document.body.querySelector('.response').classList.toggle('below')
      if (!document.body.querySelector('.lang').classList.contains('above')) {
           document.body.querySelector('.lang').classList.add('above')

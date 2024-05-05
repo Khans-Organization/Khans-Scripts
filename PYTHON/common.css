@@ -1,4 +1,5 @@
 main {
+      padding-top: 50px;
       width: 80vw;
       margin: auto;
 }
@@ -9,4 +10,33 @@ main p {
 
 .output img {
       padding: 20px 0;
+}
+
+.sidebar {
+      position: absolute;
+      z-index: 1;
+      background-color: red;
+      width: 200px;
+      height: 100vh;
+      transition: transform 1s linear;
+}
+
+#close {
+      background: red;
+      border: 0;
+      padding-top: 5px;
+      padding-left: 174px;
+      color: white;
+}
+.behind {
+      transition: transform 1s linear;
+      transform: translate(-225px, 0);
+}
+
+#ham2 {
+      position: absolute;
+      z-index: 1;
+      padding: 5px 15px;
+      border: 0;
+      background: white;
 }
