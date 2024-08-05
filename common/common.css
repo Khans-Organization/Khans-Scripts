@@ -1,6 +1,6 @@
 main {
       padding-top: 50px;
-      width: 80vw;
+      width: 90vw;
       margin: auto;
 }
 
@@ -13,6 +13,7 @@ main p {
 }
 
 .sidebar {
+      padding: 0 25px;
       position: absolute;
       z-index: 1;
       background-color: red;
@@ -30,7 +31,7 @@ main p {
 }
 .behind {
       transition: transform 1s linear;
-      transform: translate(-225px, 0);
+      transform: translate(-325px, 0);
 }
 
 #ham2 {
