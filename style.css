@@ -4,6 +4,8 @@
       font-family: "Poppins", sans-serif;
 }
 .nav {
+      z-index: 2;
+      position: relative;
       color: white;
       font-size: 28px;
       height: 60px;
