@@ -2,7 +2,7 @@ span {
     font-weight: 700;
 }
 ul {
-    padding: 30px;
+    padding: 10px 30px;
 }
 ul li {
     padding: 10px 0;
@@ -15,4 +15,8 @@ ul li {
     cursor: pointer;
     color: white;
     text-decoration: none;
+}
+
+ol li {
+    list-style-position: inside;
 }
