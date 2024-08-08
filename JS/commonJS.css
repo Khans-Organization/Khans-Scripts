@@ -20,3 +20,24 @@ ul li {
 ol li {
     list-style-position: inside;
 }
+table {
+    margin: 20px auto;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    width: 20vw;
+    padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    table {
+        width: 10vw;
+    }
+    th, td {
+        font-size: 10px;
+    }
+}
