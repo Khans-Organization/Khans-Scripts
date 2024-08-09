@@ -22,7 +22,13 @@ main p {
       height: 100vh;
       transition: transform 1s linear;
 }
+.topics {
+      padding: 10px;
+}
 
+li::marker {
+      color: white;
+}
 #close {
       background: red;
       border: 0;
@@ -38,7 +44,7 @@ main p {
 #ham2 {
       position: absolute;
       z-index: 1;
-      padding: 5px 15px;
+      padding: 75px 15px 0 15px;
       border: 0;
       background: white;
 }

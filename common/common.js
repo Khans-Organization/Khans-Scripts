@@ -26,12 +26,4 @@ let common = `<div class="nav">
                   <li class="li"><a class="link langlinks" href="../PYTHON/python1.html">Python</a></li>
             </ul>
       </div>`
-document.body.insertAdjacentHTML('afterbegin',common)
-
-document.querySelector('#close').addEventListener('click',()=>{
-      document.body.querySelector('.sidebar').classList.add('behind')
-})
-
-document.querySelector('#ham2').addEventListener('click',()=>{
-      document.body.querySelector('.sidebar').classList.remove('behind')
-})
+document.body.insertAdjacentHTML('afterbegin',common);
