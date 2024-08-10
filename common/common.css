@@ -25,8 +25,7 @@ main p {
 .topics {
       padding: 10px;
 }
-
-li::marker {
+.lists::marker {
       color: white;
 }
 #close {
