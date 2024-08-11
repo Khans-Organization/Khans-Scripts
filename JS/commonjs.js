@@ -8,6 +8,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="js4.html">Operators and Expressions</a></li>
                 <li class="lists"><a class="anchors" href="js5.html">If-Else Statements</a></li>
                 <li class="lists"><a class="anchors" href="js6.html">Switch Cases In JavaScript</a></li>
+                <li class="lists"><a class="anchors" href="js7.html">Loops In JavaScript</a></li>
             </ul>
       </div>`
 
