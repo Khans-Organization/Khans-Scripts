@@ -12,6 +12,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="js8.html">Functions In JavaScript</a></li>
                 <li class="lists"><a class="anchors" href="js9.html">Strings In JavaScript</a></li>
                 <li class="lists"><a class="anchors" href="js10.html">Arrays In JavaScript</a></li>
+                <li class="lists"><a class="anchors" href="js10.html">Some methods for Arrays</a></li>
             </ul>
       </div>`
 
