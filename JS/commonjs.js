@@ -15,6 +15,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="js11.html">Some methods for Arrays</a></li>
                 <li class="lists"><a class="anchors" href="js12.html">setTimeout and setInterval</a></li>
                 <li class="lists"><a class="anchors" href="js13.html">Scope in JavaScript</a></li>
+                <li class="lists"><a class="anchors" href="js14.html">Event Loop in JavaScript</a></li>
             </ul>
       </div>`
 
