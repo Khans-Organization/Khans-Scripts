@@ -13,7 +13,7 @@ main p {
 }
 
 .sidebar {
-      overflow-y: auto;
+      overflow-y: scroll;
       top: 0;
       padding: 65px 25px;
       position: fixed;

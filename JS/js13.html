@@ -100,6 +100,41 @@ outerFunction(); // Output: I am outside!</code></pre>
 let person = new Person();
 // This will log 1, 2, 3, ... every second</code></pre>
         <p>In this example, the arrow function inside "setInterval" inherits the "this" value from the "Person" function, allowing it to correctly reference the "age" property.</p>
+
+
+        <h2>6. Script Scope</h2>
+        <p>Script scope refers to the scope of variables and functions defined in a traditional JavaScript file (or script) that is included in an HTML document using the "script" tag. Variables and functions declared in script scope are by default added to the global scope, meaning they can be accessed from anywhere in the application.</p>
+        <h2>Key Points:</h2>
+        <ul>
+            <li>Global Scope: Variables and functions declared in script scope are global and can be accessed from other scripts on the same page.</li>
+            <li>Risk of Name Conflicts: Since variables are global, there's a risk of conflicts if multiple scripts define variables with the same name.</li>
+            <li>Typical Usage: Used in traditional web development when scripts are included directly in HTML.</li>
+        </ul>
+        <h2>Example:</h2>
+        <pre class="lang-javascript"><code>// script.js
+var globalVar = "I'm in script scope";
+
+function globalFunction() {
+    console.log(globalVar);
+}</code></pre>
+
+        <h2>7. Module Scope</h2>
+        <p>Module scope is introduced in ES6 (ECMAScript 2015) with the concept of JavaScript modules. When a script is defined as a module (using the type="module" attribute in the "script" tag), the variables and functions declared inside it are scoped to the module. They are not added to the global scope and are only accessible within the module unless explicitly exported.</p>
+        <h2>Key Points:</h2>
+        <ul>
+            <li>Local to the Module: Variables and functions are scoped to the module and do not pollute the global scope.</li>
+            <li>Export and Import: Functions, objects, and variables can be exported from a module and imported into other modules using "export" and "import" statements.</li>
+            <li>Safer Code: Reduces the risk of naming conflicts and makes the code more modular and maintainable.</li>
+        </ul>
+        <h2>Example:</h2>
+        <pre class="lang-javascript"><code>// module.js
+export const moduleVar = "I'm in module scope";
+
+export function moduleFunction() {
+    console.log(moduleVar);
+}</code></pre>
+        <h2>Usage in HTML:</h2>
+        <pre class="lang-javascript"><code>&lt;script type="module" src="module.js"&gt;&lt;/script&gt;</code></pre>
         
         <h2>Conclusion</h2>
         <p>Understanding scope is crucial for managing variables and avoiding conflicts in your JavaScript code. By mastering global, function, block, and lexical scope, you can write more efficient, predictable, and maintainable code.</p>
