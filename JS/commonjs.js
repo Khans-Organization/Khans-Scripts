@@ -20,7 +20,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="js16.html">Freezing and Sealing an Object</a></li>
                 <li class="lists"><a class="anchors" href="js17.html">Deep Copy and Shallow Copy</a></li>
                 <li class="lists"><a class="anchors" href="js18.html">Alert, Prompt and Confirm</a></li>
-                <li class="lists"><a class="anchors" href="js18.html">.some() amd .every()</a></li>
+                <li class="lists"><a class="anchors" href="js19.html">.some() amd .every()</a></li>
             </ul>
       </div>`
 
