@@ -4,6 +4,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
             <ul class="topics">
                 <li class="lists"><a class="anchors" href="python1.html">Introduction to Python</a></li>
                 <li class="lists"><a class="anchors" href="py2.html">Declaring Variables</a></li>
+                <li class="lists"><a class="anchors" href="py3.html">Data Types</a></li>
             </ul>
       </div>`
 
