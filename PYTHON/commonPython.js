@@ -3,7 +3,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
             <button id="close"><span class="material-symbols-outlined">close</span></button>
             <ul class="topics">
                 <li class="lists"><a class="anchors" href="python1.html">Introduction to Python</a></li>
-                <li class="lists"><a class="anchors" href="python1.html">Declaring Variables</a></li>
+                <li class="lists"><a class="anchors" href="py2.html">Declaring Variables</a></li>
             </ul>
       </div>`
 
