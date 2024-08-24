@@ -21,11 +21,11 @@
         <h2>1. Defining a Function</h2>
         <p>A function is defined using the "def" keyword, followed by a name, a list of parameters (optional), and a block of code to be executed when the function is called.</p>
         <h2>Syntax:</h2>
-        <pre class="lang-javascript"><code>def functionName(parameters):
-    # Code to be executed
+        <pre class="lang-python"><code>def functionName(parameters):
+    #Code to be executed
 </code></pre>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>def greet(name);
+        <pre class="lang-python"><code>def greet(name);
     print(f"Hello, {name}!")
 
 greet("Alice"); # Output: "Hello, Alice!"</code></pre>
@@ -39,7 +39,7 @@ greet("Alice"); # Output: "Hello, Alice!"</code></pre>
         <h2>2. Function Parameters and Arguments</h2>
         <p>Functions can accept parameters (also called arguments) that allow you to pass information to them. You can define a function with multiple parameters and provide corresponding arguments when calling the function.</p>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>def add(a, b):
+        <pre class="lang-python"><code>def add(a, b):
     return a + b;
 
 sum = add(5, 3) # Output: 8
@@ -54,7 +54,7 @@ print(sum)</code></pre>
         <h2>3. Function Return Values</h2>
         <p>Functions can return a value using the "return" statement. The returned value can be used in the program wherever needed.</p>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>def multiply(x, y):
+        <pre class="lang-python"><code>def multiply(x, y):
     return x * y
 
 
@@ -69,10 +69,10 @@ print(result) # Output: 20</code></pre>
         <h2>4. Anonymous (Lambda) Functions</h2>
         <p> In Python, Lambda functions are Small, unnamed functions defined using the lambda keyword. These functions are generally used for short operations that are not reused elsewhere in the code.</p>
         <h2>Syntax:</h2>
-        <pre class="lang-javascript"><code>lambda arguments: expression
+        <pre class="lang-python"><code>lambda arguments: expression
 </code></pre>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>add = lambda x, y: x + y
+        <pre class="lang-python"><code>add = lambda x, y: x + y
 print(add(2, 3))  # Output: 5
 </code></pre>
         <h2>Explanation:</h2>
@@ -84,7 +84,7 @@ print(add(2, 3))  # Output: 5
         <h2>5. Recursive Functions</h2>
         <p>Recursive functions call themselves within their own definition. They are useful for tasks that can be broken down into similar sub-tasks.</p>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>def factorial(n):
+        <pre class="lang-python"><code>def factorial(n):
 if n == 1:
     return 1
 else:
@@ -104,12 +104,12 @@ print(factorial(5))  # Output: 120
         <h2>6. Generator Functions</h2>
         <p>These functions use the 'yield' keyword to return a value and pause the function's execution, resuming from where it left off when called again. They are used to create iterators.</p>
         <h2>Syntax:</h2>
-        <pre class="lang-javascript"><code>def generator_function(arguments):
+        <pre class="lang-python"><code>def generator_function(arguments):
     # Code before yield
     yield value
     # Code after yield (if any)</code></pre>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>def countdown(n):
+        <pre class="lang-python"><code>def countdown(n):
     while n > 0:
         yield n
         n -= 1

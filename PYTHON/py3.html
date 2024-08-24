@@ -25,7 +25,7 @@
             <li><span>Int and Float:</span>
                 <ul>
                     <li>Represents both integer and floating-point numbers.
-                    <pre class="lang-javascript"><code>age = 25  #"int"
+                    <pre class="lang-python"><code>age = 25 #"int"
 temperature = -10.5 #"float"</code></pre>
                       </li>
                 </ul>
@@ -34,7 +34,7 @@ temperature = -10.5 #"float"</code></pre>
                 <ul>
                     <li>Represents a sequence of characters used to store text.</li>
                     <li>Strings can be enclosed in single quotes or double quotes.
-                    <pre class="lang-javascript"><code>greeting = "Hello, world!"
+                    <pre class="lang-python"><code>greeting = "Hello, world!"
 name = 'Alice'
 message = f"Welcome, {name}!"</code></pre></li>
                 </ul>
@@ -42,8 +42,8 @@ message = f"Welcome, {name}!"</code></pre></li>
             <li><span>Boolean:</span>
                 <ul>
                     <li>Represents a logical entity and can have two values: "True" and "False".
-                    <pre class="lang-javascript"><code>isActive = True;
-isCompleted = False;</code></pre></li>
+                    <pre class="lang-python"><code>isActive = True
+isCompleted = False</code></pre></li>
               </ul>
             </li>
         <h2>Non-Primitive Data Types</h2>
@@ -53,7 +53,7 @@ isCompleted = False;</code></pre></li>
                   <ul>
                       <li>Represents a collection of key-value pairs.</li>
                       <li>Objects can hold other objects, primitive values, functions, and more.
-                      <pre class="lang-javascript"><code>person = {
+                      <pre class="lang-python"><code>person = {
 "name": "Alice",
 "age": 30,
 "isStudent": True
@@ -64,7 +64,7 @@ isCompleted = False;</code></pre></li>
                   <ul>
                       <li>Represents an ordered list of values (elements).</li>
                       <li>Lists can hold any data type, including other Lists or dictionaries.
-                      <pre class="lang-javascript"><code>numbers = [1, 2, 3, 4, 5]
+                      <pre class="lang-python"><code>numbers = [1, 2, 3, 4, 5]
 MixedList = [1, "Hello", true]</code></pre></li>
                 </ul>
               </li>
@@ -72,7 +72,7 @@ MixedList = [1, "Hello", true]</code></pre></li>
                   <ul>
                       <li>Represents a block of code designed to perform a particular task.</li>
                       <li>Functions are objects in Python and can be assigned to variables, passed as arguments, and returned from other functions.
-                      <pre class="lang-javascript"><code>def add(a, b)
+                      <pre class="lang-python"><code>def add(a, b):
     return a + b
 </code></pre></li>
                 </ul>
@@ -80,8 +80,8 @@ MixedList = [1, "Hello", true]</code></pre></li>
         </ul>
         <h2>Type Checking</h2>
         <p>In Python, you can check the data type of a variable or value using the built-in type() function. This function returns the type of the object passed to it.</p>
-        <pre class="lang-javascript"><code>print(type(42)) #"int"
-            print(type(42.0)) #"float"
+        <pre class="lang-python"><code>print(type(42)) # "int"
+print(type(42.0)) # "float"
 print(type("Hello")) # "string"
 print(type(True)) # "boolean"
 print(type({})) # "Dict"
