@@ -22,11 +22,11 @@
         <p class="history">Primitive data types are the most basic types of data. They are immutable, meaning their value cannot be changed once created.</p>
         <h2>Characteristics:</h2>
         <ol>
-            <li><span>Number:</span>
+            <li><span>Int and Float:</span>
                 <ul>
                     <li>Represents both integer and floating-point numbers.
-                    <pre class="lang-javascript"><code>age = 25;
-temperature = -10.5;</code></pre>
+                    <pre class="lang-javascript"><code>age = 25  #"int"
+temperature = -10.5 #"float"</code></pre>
                       </li>
                 </ul>
             </li>
@@ -36,7 +36,7 @@ temperature = -10.5;</code></pre>
                     <li>Strings can be enclosed in single quotes or double quotes.
                     <pre class="lang-javascript"><code>greeting = "Hello, world!"
 name = 'Alice'
-message = `Welcome, ${name}!`</code></pre></li>
+message = f"Welcome, {name}!"</code></pre></li>
                 </ul>
             </li>
             <li><span>Boolean:</span>
@@ -54,9 +54,9 @@ isCompleted = False;</code></pre></li>
                       <li>Represents a collection of key-value pairs.</li>
                       <li>Objects can hold other objects, primitive values, functions, and more.
                       <pre class="lang-javascript"><code>person = {
-name: "Alice",
-age: 30,
-isStudent: True
+"name": "Alice",
+"age": 30,
+"isStudent": True
 }</code></pre></li>
                 </ul>
               </li>
@@ -64,15 +64,15 @@ isStudent: True
                   <ul>
                       <li>Represents an ordered list of values (elements).</li>
                       <li>Lists can hold any data type, including other Lists or dictionaries.
-                      <pre class="lang-javascript"><code>numbers = [1, 2, 3, 4, 5];
-MixedList = [1, "Hello", true, null];</code></pre></li>
+                      <pre class="lang-javascript"><code>numbers = [1, 2, 3, 4, 5]
+MixedList = [1, "Hello", true]</code></pre></li>
                 </ul>
               </li>
               <li><span>Function:</span>
                   <ul>
                       <li>Represents a block of code designed to perform a particular task.</li>
                       <li>Functions are objects in Python and can be assigned to variables, passed as arguments, and returned from other functions.
-                      <pre class="lang-javascript"><code>def add(a, b):
+                      <pre class="lang-javascript"><code>def add(a, b)
     return a + b
 </code></pre></li>
                 </ul>
@@ -80,11 +80,12 @@ MixedList = [1, "Hello", true, null];</code></pre></li>
         </ul>
         <h2>Type Checking</h2>
         <p>In Python, you can check the data type of a variable or value using the built-in type() function. This function returns the type of the object passed to it.</p>
-        <pre class="lang-javascript"><code>print(type(42)) #"number"
+        <pre class="lang-javascript"><code>print(type(42)) #"int"
+            print(type(42.0)) #"float"
 print(type("Hello")) # "string"
 print(type(True)) # "boolean"
-print(type({})) # "object"
-print(type([])) # "object" (Lists are a type of object)
+print(type({})) # "Dict"
+print(type([])) # "List" (Lists are a type of object)
 </code></pre>
         <h2>Conclusion</h2>
         <p>Understanding Python data types is fundamental for writing effective code. By knowing the different types and how to use them, you can avoid common pitfalls and ensure your programs handle data correctly.</p>
