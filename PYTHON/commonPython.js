@@ -9,6 +9,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="py5.html">If Else Statements</a></li>
                 <li class="lists"><a class="anchors" href="py6.html">Loops</a></li>
                 <li class="lists"><a class="anchors" href="py7.html">Functions</a></li>
+                <li class="lists"><a class="anchors" href="py8.html">Strings</a></li>
             </ul>
       </div>`
 
