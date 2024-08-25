@@ -1,4 +1,4 @@
-Document Object Model (DOM) in JavaScriptDocument Object Model (DOM) in JavaScript<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
       <meta charset="UTF-8">
@@ -53,7 +53,7 @@ Document Object Model (DOM) in JavaScriptDocument Object Model (DOM) in JavaScri
         <h2>3. DOM Manipulation</h2>
         <p>JavaScript provides various methods and properties to interact with and manipulate the DOM. These allow developers to dynamically change the content, structure, and style of web pages.
         <ol>
-            <li style="list-style: lower-alpha;">Selecting Elements</li>
+            <h3>a. Selecting Elements</h3>
             <p>To manipulate an element, you first need to select it. The most common ways to select elements in the DOM are:</p>
             <ul>
                 <li>"document.getElementById(id)": Selects an element by its id attribute.</li>
@@ -67,7 +67,7 @@ Document Object Model (DOM) in JavaScriptDocument Object Model (DOM) in JavaScri
     const paragraphs = document.getElementsByClassName("myParagraph");
     const firstDiv = document.querySelector("div");
     const allDivs = document.querySelectorAll("div");</code></pre>
-            <li style="list-style: lower-alpha;">Manipulating Elements</li>
+            <h3>b. Manipulating Elements</h3>
             <p>Once an element is selected, you can manipulate its content, attributes, and style.</p>
             <ul>
                 <li>"element.innerHTML": Gets or sets the HTML content inside an element.</li>
@@ -82,8 +82,9 @@ Document Object Model (DOM) in JavaScriptDocument Object Model (DOM) in JavaScri
     const paragraph = document.querySelector("p");
     paragraph.style.color = "blue";</code></pre>
 
-            <li style="list-style: lower-alpha;"> Creating and Removing Elements</li>
+            <h3>c. Creating and Removing Elements</h3>
             <p>JavaScript also allows you to create new elements and remove existing ones from the DOM.
+            <ul>
                 <li>"document.createElement(tagName)": Creates a new element node.</li>
                 <li>"parentNode.appendChild(newNode)": Appends a new child element to a parent node.</li>
                 <li>"parentNode.removeChild(childNode)": Removes a child node from a parent node.</li>
@@ -96,7 +97,7 @@ document.body.appendChild(newParagraph);
 const oldParagraph = document.getElementById("oldParagraph");
 document.body.removeChild(oldParagraph);</code></pre>
 
-            <li style="list-style: lower-alpha;">DOM Tree Traversal</li>
+            <h3>DOM Tree Traversal</h3>
             <p>Sometimes, you may need to navigate through the DOM tree to access parent, child, or sibling nodes.</p>
             <ul>
                 <li>"element.parentNode": Returns the parent node of an element.</li>

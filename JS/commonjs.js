@@ -23,6 +23,7 @@ let btn = `<button id="ham2"><span class="material-symbols-outlined">menu</span>
                 <li class="lists"><a class="anchors" href="js19.html">.some() amd .every()</a></li>
                 <li class="lists"><a class="anchors" href="js20.html">Browser Object Model</a></li>
                 <li class="lists"><a class="anchors" href="js21.html">Document Object Model</a></li>
+                <li class="lists"><a class="anchors" href="js22.html">Events</a></li>
                 <li class="lists"><a class="anchors"></a></li>
                 <li class="lists"><a class="anchors"></a></li>
             </ul>

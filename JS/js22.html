@@ -15,91 +15,94 @@
       <link rel="stylesheet" href="../common/common.css">
 <body>
       <main>
-        <h1>Browser Object Model (BOM) in JavaScript</h1>
-        <p>The Browser Object Model (BOM) is a collection of objects provided by the browser that allows JavaScript to interact with the web browser itself, rather than the content of the web page. BOM is essential for performing tasks like controlling browser windows, handling user input, and manipulating the browser's environment.</p>
-        <h2>1. Overview of BOM</h2>
-        <p>The BOM includes several objects that represent the browser and its various aspects. The most important of these objects are:</p>
-        <ul>
-            <li>"window"</li>
-            <li>"navigator"</li>
-            <li>"screen"</li>
-            <li>"location"</li>
-            <li>"history"</li>
-        </ul>
-        <p>Unlike the Document Object Model (DOM), which deals with the structure of the web page, the BOM is concerned with the browser environment.</p>
-        <h2>2. Key BOM Objects</h2>
-        
-        <h2>a. "window" Object</h2>
-        <p>The "window" object is the global object for the browser environment. All global JavaScript variables, functions, and objects are members of the "window" object.</p>
-        <h2>Key Properties and Methods:</h2>
-        <ul>
-            <li>"window.alert(message)": Displays an alert box with a specified message.</li>
-            <li>"window.setTimeout(function, milliseconds)": Executes a function after a specified delay.</li>
-            <li>"window.setInterval(function, milliseconds)": Repeatedly executes a function at specified intervals.</li>
-            <li>"window.innerWidth" and "window.innerHeight": Returns the width and height of the browser's viewport.</li>
-        </ul>
+        <h1>Events in JavaScript</h1>
+        <p>Events in JavaScript are actions or occurrences that happen in the browser, such as user interactions, loading of documents, or actions triggered by the browser itself. Events provide a way to react to these occurrences, allowing developers to create interactive and dynamic web pages. Common examples include clicking a button, hovering over an element, submitting a form, or resizing the window.</p>
+        <h2>1. Understanding Events</h2>
+        <p>Events are an integral part of the JavaScript language and are essential for creating responsive and interactive user interfaces. When an event occurs, it triggers an event handler (a function) that executes the code you define.</p>
+        <h2>2. Event Handling</h2>
+        <p>To respond to events, you need to attach an event handler to an element. There are several ways to handle events in JavaScript:</p>
+        <h3>a. Inline Event Handlers</h3>
+        <p>You can add an event handler directly within an HTML element's tag:</p>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>window.alert("Hello, World!");</code></pre>
-        <p>Note: Since "window" is the global object, its methods and properties can be accessed without explicitly writing "window".</p>
-        <h2>a. "navigator" Object</h2>
-        <p>The "navigator" object provides information about the browser and the user's environment, such as the browser's name, version, and operating system.</p>
-        <h2>Key Properties and Methods:</h2>
-        <ul>
-            <li>"navigator.userAgent": Returns the user-agent string for the browser.</li>
-            <li>"navigator.language": Returns the preferred language of the user.</li>
-            <li>"navigator.platform": Returns the platform on which the browser is running (e.g., "Win32").</li>
-        </ul>
+        <pre class="lang-javascript"><code>&lt;button onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;</code></pre>
+        <h3>b. Event Handler Properties</h3>
+        <p>You can assign a function to an element's event handler property using JavaScript:</p>
         <h2>Example:</h2>
-        <pre class="lang-javascript"><code>console.log(navigator.userAgent);</code></pre>
-        <p>Note: Since "window" is the global object, its methods and properties can be accessed without explicitly writing "window".</p>
-        <h2>c. screen Object</h2>
-        <p>The "screen" object contains information about the user's screen, such as its size and color depth.</p>
-        <h2>Key Properties and Methods:</h2>
+        <pre class="lang-javascript"><code>const button = document.getElementById('myButton');
+button.onclick = function() {
+    alert('Button clicked!');
+};</code></pre>
+
+        <h3>c. addEventListener() Method</h3>
+        <p>The recommended way to attach event handlers is by using the "addEventListener()" method. This method allows you to attach multiple event handlers to a single element and works for most events.</p>
+        <pre class="lang-javascript"><code>const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});</code></pre>
+        <h3>Example with multiple events:</h3>
+        <pre class="lang-javascript"><code>button.addEventListener('mouseover', function() {
+    button.style.backgroundColor = 'yellow';
+});
+
+button.addEventListener('mouseout', function() {
+    button.style.backgroundColor = '';
+});</code></pre>
+        <h2>3. Event Object</h2>
+        <p>When an event occurs, an event object is automatically passed to the event handler. This object contains useful information about the event, such as the type of event, the target element, and details about the user interaction.</p>
+        <h3>Common Properties of the Event Object:</h3>
         <ul>
-            <li>"screen.width" and "screen.height": Returns the width and height of the user's screen.</li>
-            <li>"screen.availWidth" and "screen.availHeight": Returns the width and height of the screen, excluding interface features like the taskbar.</li>
-            <li>"screen.colorDepth": Returns the number of bits used to display a single color.</li>
+            <li>"type": The type of the event (e.g., "click", "keydown").</li>
+            <li>"target": The element that triggered the event.</li>
+            <li>"currentTarget": The element to which the event handler is attached.</li>
+            <li>"preventDefault()": Prevents the default action associated with the event.</li>
+            <li>"stopPropagation()": Stops the event from bubbling up to parent elements.</li>
         </ul>
-        <h2>Example:</h2>
-        <pre class="lang-javascript"><code>console.log("Screen width: " + screen.width);
-console.log("Screen height: " + screen.height);</code></pre>
-        <h2>d. "location" Object</h2>
-        <p>The "location" object represents the current URL of the browser. It can be used to get the current URL, navigate to a new URL, or reload the page.</p>
-        <h2>Key Properties and Methods:</h2>
+        <h3>Example:</h3>
+        <pre class="lang-javascript"><code>button.addEventListener('click', function(event) {
+    console.log('Event type:', event.type);
+    console.log('Event target:', event.target);
+});</code></pre>
+        <h2>4. Event Bubbling and Capturing</h2>
+        <p>When an event occurs in the DOM, it does not trigger only on the target element but also on all its parent elements in a process called event propagation. There are two phases of event propagation:</p>
         <ul>
-            <li>location.href":" Returns the full URL of the current page.</li>
-            <li>"location.hostname": Returns the domain name of the web host.</li>
-            <li>"location.pathname": Returns the path of the current page.</li>
-            <li>"location.search": Returns the query string of the URL.</li>
-            <li>"location.assign(url)"": Loads a new document at the specified URL.</li>
-            <li>"location.reload()"": Reloads the current page.</li>
+            <li>Event Bubbling: The event starts at the target element and bubbles up to the root of the DOM tree.</li>
+            <li>Event Capturing (Trickling): The event starts from the root and trickles down to the target element.</li>
         </ul>
-        <h2>Example:</h2>
-        <pre class="lang-javascript"><code>console.log("Current URL: " + location.href);
-location.assign("https://www.example.com");</code></pre>
-        <h2>e. history Object</h2>
-        <p>The "history" object provides access to the browser's session history, allowing navigation backward and forward through the user's history.</p>
-        <h2>Key Properties and Methods:</h2>
-        <ul>
-            <li>"history.back()": Loads the previous URL in the history list.</li>
-            <li>"history.forward()": Loads the next URL in the history list.</li>
-            <li>"history.go(n)": Loads a specific page from the session history, where n can be a positive or negative integer.</li>
-        </ul>
-        <h2>Example:</h2>
-        <pre class="lang-javascript"><code>history.back();  // Goes back to the previous page</code></pre>
-        
-        <h2>4. Common Use Cases of BOM</h2>
-        <ul>
-            <li>Managing Pop-ups: Opening and closing browser windows or tabs.</li>
-            <li>Controlling Navigation: Redirecting users to different URLs or reloading the page.</li>
-            <li>Gathering Environment Information: Detecting user-agent, screen resolution, and language preferences.</li>
-            <li>Interacting with the User: Using methods like "alert()", "confirm()", and "prompt()" to interact with users.</li>
-        </ul>
-        
-        <h2>Conclusion</h2>
-        <p>The Browser Object Model (BOM) provides a set of objects and methods that allow developers to interact with the browser environment, control navigation, and retrieve information about the user's system. Understanding the BOM is essential for creating dynamic and responsive web applications that can respond to the user's browser settings and actions.</p>
-    </main>
-    <script src="../common/common.js"></script>
-    <script src="commonjs.js"></script>
-</body>
+        <p>By default, events bubble up, but you can capture them during the capturing phase by setting the third parameter of "addEventListener()" to "true".</p>
+        <h3>Example:</h3>
+        <pre class="lang-javascript"><code>const div = document.getElementById('myDiv');
+const button = document.getElementById('myButton');
+
+div.addEventListener('click', function() {
+    alert('Div clicked!');
+}, true); // Capturing phase
+
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});</code></pre>
+            <h2>5. Removing Event Handlers</h2>
+            <p>You can remove an event handler using the "removeEventListener()" method. This is useful when you no longer want a specific event to trigger the associated handler.</p>
+            <h3>Example:</h3>
+            <pre class="lang-javascript"><code>function handleClick() {
+    alert('Button clicked!');
+}
+
+button.addEventListener('click', handleClick);
+
+// Later in your code
+button.removeEventListener('click', handleClick);</code></pre>
+            <h2>6. Common Use Cases of Events</h2>
+            <ul>
+                <li>Form Validation: Validating user input before submission and providing feedback..</li>
+                <li>Dynamic Content Update: Changing content based on user actions, like showing or hiding elements.</li>
+                <li>Interactive UI Components: Creating menus, modals, sliders, and other interactive elements.</li>
+                <li>Tracking User Behavior: Monitoring clicks, key presses, and other interactions for analytics.</li>
+                <li>Handling Keyboard Shortcuts: Implementing custom keyboard shortcuts for improved user experience.</li>
+            </ul>
+            <h2>Conclusion</h2>
+            <p>Events are a powerful tool in JavaScript that allow you to make your web pages interactive and responsive to user actions. By understanding how to handle events effectively, you can create dynamic, user-friendly web applications that react to user inputs in real time.</p>
+        </main>
+        <script src="../common/common.js"></script>
+        <script src="commonjs.js"></script>
+    </body>
 </html>
