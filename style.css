@@ -2,6 +2,7 @@
       margin: 0;
       padding: 0;
       font-family: "Poppins", sans-serif;
+      transition: background-color 0.5s linear, color 0.5s linear;
 }
 .nav {
       z-index: 2;
@@ -10,20 +11,48 @@
       font-size: 28px;
       height: 60px;
       padding-left: 30px;
-      background-color: red;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid white;
 }
+.myNav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 70vw;
+}
+.red {
+      background-color: red;
+}
+.gray {
+      background-color: rgb(168, 168, 168);
+}
 
+.black {
+      background-color: black;
+}
+.white {
+     color: white;
+}
 .ul {
-      margin-right: 10vw;
       display: flex;
       flex-direction: row;
       list-style: none;
       font-size: 20px;
 }
+
+.darkMode {
+      cursor: pointer;
+      border-radius: 15px;
+      font-size: 20px;
+      padding: 0 10px;
+      color: white;
+      border: 2px solid white;
+      margin-right: 40px;
+}
+
+
 .navlinks{
       border: 0;
       margin-left: 50px;    
@@ -31,7 +60,6 @@
 
 .btn {
       font-size: 20px;
-      background-color: red;
 }
 .link {
       color: white;
@@ -44,8 +72,7 @@
       width: 100vw;
       position: absolute;
       z-index: 2;
-      text-align: center;
-      background-color: red;
+      text-align: center;  
       transition: transform 0.5s linear;
 }
 .li {
@@ -53,16 +80,11 @@
       list-style: none;
 }
 .above {
-      transform: translate(0, -400px);
+      transform: translateY(-400px);
       transition: transform 0.5s linear;
 }
 .langlinks {
-      border-bottom: 2px solid red;
       font-size: 20px;
-}
-
-.langlinks:hover {
-      border-bottom-color: black;
 }
 
 .home {
@@ -91,8 +113,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: transform 0.5s linear;;
-      background: red;
+      transition: transform 0.5s linear;
       transform: translate(0, -200px);
       height: 60px;
 }
@@ -105,23 +126,11 @@
       cursor: pointer;;
       border: 0;
       color: white;
-      background-color: red;
       padding: 6px 10px 0px 10px;
       display: none;
 }
 
-footer {
-      flex-wrap: wrap;
-      align-content: center;
-      display: flex;
-      height: 60px;
-      padding-left: 40px;
-      background-color: red;
-      color: white;
-      font-size: 20px;
-}
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1170px) {
       .nav nav {
             display: none;
       }
@@ -159,10 +168,10 @@ footer {
       .nav {
             font-size: 18px;
       }
-      footer{
-            padding-left: 5px;
-            font-size: 10px;
+      .darkMode {
+            font-size: 12px;
       }
+
 }
 
 .toolbar-item button {
@@ -171,3 +180,4 @@ footer {
       padding: 5px 10px !important;
       border: 2px solid white !important;
 }
+
