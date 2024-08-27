@@ -11,6 +11,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py7.html">Functions</a></li>
                 <li class="lists"><a class="anchors" href="py8.html">Strings</a></li>
                 <li class="lists"><a class="anchors" href="py9.html">Lists</a></li>
+                <li class="lists"><a class="anchors" href="py10.html">Some methods for Lists</a></li>
             </ul>
       </div>`
 
