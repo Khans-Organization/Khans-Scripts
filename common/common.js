@@ -39,6 +39,7 @@ const langDiv = document.querySelector('.lang');
 const darkMode = document.querySelectorAll('.darkMode');
 const redElements = document.querySelectorAll('.red');
 const children = document.body.children;
+const myStorage = localStorage;
 
 // Toggle the navigation for mobile view
 hamButton.addEventListener('click', () => {

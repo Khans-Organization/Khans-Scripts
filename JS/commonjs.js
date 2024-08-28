@@ -24,6 +24,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="js20.html">Browser Object Model</a></li>
                 <li class="lists"><a class="anchors" href="js21.html">Document Object Model</a></li>
                 <li class="lists"><a class="anchors" href="js22.html">Events</a></li>
+                <li class="lists"><a class="anchors" href="js23.html">cloneNode()</a></li>
                 <li class="lists"><a class="anchors"></a></li>
                 <li class="lists"><a class="anchors"></a></li>
             </ul>
