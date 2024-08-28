@@ -16,25 +16,36 @@ document.querySelector('#ham2').addEventListener('click',()=>{
     document.body.querySelector('.sidebar').classList.remove('behind');
 })
 
+// Checking for dark mode 
+if (JSON.parse(myStorage.getItem('val')) === 1) {
+    document.querySelector('.sidebar').classList.remove('red');
+    document.querySelector('.sidebar').classList.add('gray');
+    document.querySelector('#close').classList.remove('red');
+    document.querySelector('#close').classList.add('gray');
+    document.querySelector('#ham2').classList.remove('whiteBack');
+    document.querySelector('#ham2').classList.add('black');
+    document.querySelector('#ham2').classList.add('white');
+}
+
 Array.from(darkMode).forEach((val)=>{
     val.addEventListener('click',()=>{
-        if ((document.querySelector('#ham2').classList.contains('whiteBack')) && document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close').classList.contains('red')) {
+        if (document.querySelector('#ham2').classList.contains('whiteBack') && document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close').classList.contains('red')) {
+            document.querySelector('#ham2').classList.add('white');
             document.querySelector('#ham2').classList.remove('whiteBack');
             document.querySelector('#ham2').classList.add('black');
             document.querySelector('.sidebar').classList.remove('red');
             document.querySelector('.sidebar').classList.add('gray');
             document.querySelector('#close').classList.remove('red');
             document.querySelector('#close').classList.add('gray');
-            val.innerHTML = "Light Mode";
         }
         else {
+            document.querySelector('#ham2').classList.remove('white');
             document.querySelector('#ham2').classList.remove('black');
             document.querySelector('#ham2').classList.add('whiteBack');
             document.querySelector('.sidebar').classList.remove('gray');
             document.querySelector('.sidebar').classList.add('red');
             document.querySelector('#close').classList.remove('gray');
             document.querySelector('#close').classList.add('red');
-            val.innerHTML = "Dark Mode";
         }
     })
 })

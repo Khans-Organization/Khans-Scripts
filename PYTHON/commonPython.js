@@ -12,6 +12,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py8.html">Strings</a></li>
                 <li class="lists"><a class="anchors" href="py9.html">Lists</a></li>
                 <li class="lists"><a class="anchors" href="py10.html">Some methods for Lists</a></li>
+                <li class="lists"><a class="anchors" href="py11.html">Time Module</a></li>
             </ul>
       </div>`
 
@@ -25,27 +26,36 @@ document.querySelector('#ham2').addEventListener('click',()=>{
     document.body.querySelector('.sidebar').classList.remove('behind');
 })
 
+// Checking for dark mode 
+if (JSON.parse(myStorage.getItem('val')) === 1) {
+    document.querySelector('.sidebar').classList.remove('red');
+    document.querySelector('.sidebar').classList.add('gray');
+    document.querySelector('#close').classList.remove('red');
+    document.querySelector('#close').classList.add('gray');
+    document.querySelector('#ham2').classList.remove('whiteBack');
+    document.querySelector('#ham2').classList.add('black');
+    document.querySelector('#ham2').classList.add('white');
+}
 
-darkMode.forEach((val)=>{
+Array.from(darkMode).forEach((val)=>{
     val.addEventListener('click',()=>{
-        if (document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close').classList.contains('red') && document.querySelector('#ham2').classList.contains('whiteBack')) {
+        if (document.querySelector('#ham2').classList.contains('whiteBack') && document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close').classList.contains('red')) {
+            document.querySelector('#ham2').classList.add('white');
+            document.querySelector('#ham2').classList.remove('whiteBack');
+            document.querySelector('#ham2').classList.add('black');
             document.querySelector('.sidebar').classList.remove('red');
             document.querySelector('.sidebar').classList.add('gray');
             document.querySelector('#close').classList.remove('red');
             document.querySelector('#close').classList.add('gray');
-            document.querySelector('#ham2').classList.remove('whiteBack');
-            document.querySelector('#ham2').classList.add('black');
-            val.innerHTML = "Light Mode";
         }
         else {
+            document.querySelector('#ham2').classList.remove('white');
             document.querySelector('#ham2').classList.remove('black');
             document.querySelector('#ham2').classList.add('whiteBack');
             document.querySelector('.sidebar').classList.remove('gray');
             document.querySelector('.sidebar').classList.add('red');
             document.querySelector('#close').classList.remove('gray');
             document.querySelector('#close').classList.add('red');
-            val.innerHTML = "Dark Mode";
         }
-
     })
 })

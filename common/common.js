@@ -1,3 +1,5 @@
+let myStorage = localStorage;
+
 let common = `<div class="nav red">
       <div class="myNav">
             Khan's Scripts!
@@ -29,6 +31,7 @@ let common = `<div class="nav red">
       </ul>
 </div>`;
 
+
 document.body.insertAdjacentHTML('afterbegin', common);
 
 const hamButton = document.querySelector('#ham1');
@@ -39,8 +42,45 @@ const langDiv = document.querySelector('.lang');
 const darkMode = document.querySelectorAll('.darkMode');
 const redElements = document.querySelectorAll('.red');
 const children = document.body.children;
-const myStorage = localStorage;
 
+// Checking for dark mode 
+if (JSON.parse(myStorage.getItem('val')) === 1) {
+      document.body.classList.add('black');
+      Array.from(children).forEach(child => {
+            child.classList.add('white');
+      });
+      redElements.forEach(element => {
+            darkMode.innerHTML = "Light Mode";
+            element.classList.remove('red');
+            element.classList.add('gray');
+      })
+}
+
+
+
+// Dark mode toggle
+darkMode.forEach(button => {
+      button.addEventListener('click', () => {
+            document.body.classList.toggle('black');
+            Array.from(children).forEach(child => {
+                  child.classList.toggle('white');
+            });
+
+            redElements.forEach(element => {
+                  if (element.classList.contains('red')) {
+                        myStorage.setItem('val', 1);
+                        button.innerHTML = "Light Mode";
+                        element.classList.remove('red');
+                        element.classList.add('gray');
+                  } else {
+                        myStorage.setItem('val', 0);
+                        button.innerHTML = "Dark Mode";
+                        element.classList.remove('gray');
+                        element.classList.add('red');
+                  }
+            });
+      });
+});
 // Toggle the navigation for mobile view
 hamButton.addEventListener('click', () => {
       responseDiv.classList.toggle('below');
@@ -65,24 +105,4 @@ window.addEventListener('resize', () => {
       }
 });
 
-// Dark mode toggle
-darkMode.forEach(button => {
-      button.addEventListener('click', () => {
-            document.body.classList.toggle('black');
-            Array.from(children).forEach(child => {
-                  child.classList.toggle('white');
-            });
 
-            redElements.forEach(element => {
-                  if (element.classList.contains('red')) {
-                        button.innerHTML = "Light Mode";
-                        element.classList.remove('red');
-                        element.classList.add('gray');
-                  } else {
-                        button.innerHTML = "Dark Mode";
-                        element.classList.remove('gray');
-                        element.classList.add('red');
-                  }
-            });
-      });
-});

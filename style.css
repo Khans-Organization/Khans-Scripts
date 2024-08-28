@@ -67,7 +67,6 @@
       text-decoration: none;
 }
 .lang {
-      padding: 20px 0;
       top: 62px;
       width: 100vw;
       position: absolute;
@@ -135,7 +134,8 @@
             display: none;
       }
       .lang {
-            top: 122px;
+            border-top: 1px solid white;
+            top: 121px;
       }
       .img img {
             margin: auto;
@@ -153,7 +153,12 @@
       }
       .ul{
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             font-size: 12px;
+      }
+      .navlinks {
+            margin-left: 0;
       }
       .btn{
             font-size: 12px;
