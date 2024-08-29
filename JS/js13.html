@@ -72,18 +72,7 @@ console.log(functionScopedVar); // Accessible here, even outside the block</code
 }
 
 outerFunction(); // Output: I am outside!</code></pre>
-        <h2>Example:</h2>
-        <pre class="lang-javascript"><code>function outerFunction() {
-    let outerVar = "I am outside!";
-    
-    function innerFunction() {
-        console.log(outerVar); // Accessible here due to lexical scope
-    }
-    
-    innerFunction();
-}
 
-outerFunction(); // Output: I am outside!</code></pre>
         <p>In this example, "innerFunction" can access outerVar because it is lexically inside "outerFunction".</p>
         <h2>5. Lexical Scope in Arrow Functions</h2>
         <p>Arrow functions inherit the "this" value from their enclosing scope due to lexical scoping.</p>
