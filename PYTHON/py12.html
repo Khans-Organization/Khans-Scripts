@@ -22,12 +22,11 @@
         <h2>Example of a Closure:</h2>
         <pre class="lang-javascript"><code>def outer_function():
     outer_var = "I'm outside!"
-        
+
     def inner_function():
         print(outer_var)  # Accesses the outer function's variable
-        
-        return inner_function
-        
+        return inner_function   
+
 closure_func = outer_function()
 closure_func()  # Output: "I'm outside!"
         </code></pre>
@@ -41,7 +40,7 @@ closure_func()  # Output: "I'm outside!"
         <h2>2. Practical Use Cases of Closures</h2>
         <p>Closures are useful in a variety of situations:</p>
         <ol>
-            <li style="list-style-type: lower-alpha;">Data Encapsulation</li>
+            <h3><li style="list-style-type: lower-alpha;">Data Encapsulation</li></h3>
             <p>Closures can be used to create private variables that cannot be accessed directly from outside the function.</p>
             <h3>Example:</h3>
             <pre class="lang-python"><code>def counter():
@@ -61,7 +60,7 @@ print(my_counter())  # Output: 2
                 <li>The variable "count" is private to the "createCounter" function and cannot be accessed directly from the outside.</li>
                 <li>Each call to "counter()" increments the count and returns the updated value.</li>
             </ul>
-            <li style="list-style-type: lower-alpha;">Function Factories</li>
+            <h3><li style="list-style-type: lower-alpha;">Function Factories</li></h3>
             <p>Closures can be used to create functions that are pre-configured with certain values.</p>
             <h3>Example:</h3>
             <pre class="lang-python"><code>def createMultiplier(multiplier):
