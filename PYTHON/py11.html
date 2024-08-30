@@ -44,16 +44,16 @@ print(message) # Error: message is not defined</code></pre>
         <p>Enclosing scope is the scope that allows inner functions to access variables from the outer (enclosing) functions. The accessibility is determined by the structure of the code, meaning that inner functions can access variables from their enclosing functions because of their physical placement within the source code.</p>
         <h2>Example:</h2>
         <pre class="lang-python"><code>def outerFunction():
-            outerVar = "I am outside!"
-            
-            def innerFunction():
-                print(outerVar) # Accessible here due to enclosing scope
-            
-            
-            innerFunction()
-        
-        
-        outerFunction() # Output: I am outside!</code></pre>
+    outerVar = "I am outside!"
+
+def innerFunction():
+    print(outerVar) # Accessible here due to enclosing scope
+
+
+innerFunction()
+
+
+outerFunction() # Output: I am outside!</code></pre>
         <p>In this example, "innerFunction" can access outerVar because it is enclosing inside "outerFunction".</p>
         <h2>3. Built-in Scope</h2>
         <p>Built-in scope in Python refers to the scope that contains names and objects that are always available in Python, without the need for any imports. These are defined by Python itself and include built-in functions, exceptions, and other objects.</p>
