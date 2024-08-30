@@ -16,7 +16,8 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py12.html">Some methods for Dictionaries</a></li>
                 <li class="lists"><a class="anchors" href="py13.html">Scope</a></li>
                 <li class="lists"><a class="anchors" href="py14.html">Closures</a></li>
-            </ul>
+                <li class="lists"><a class="anchors" </a></li>
+                <li class="lists"><a class="anchors" </a></li>            </ul>
       </div>`
 
 document.body.insertAdjacentHTML('afterbegin', btn);
