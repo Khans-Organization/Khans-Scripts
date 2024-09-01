@@ -15,84 +15,64 @@
       <link rel="stylesheet" href="commonPython.css">
 <body>
       <main>
-        <h1>Scope in Python</h1>
-        <p>In Python, scope determines the accessibility of variables, functions, and objects in different parts of your code. Understanding scope is essential for writing clear and bug-free code. There are several types of scope in Python, including Global scope, Local scope, Enclosing scope, and built-in scope.</p>
-        <h2>1. Global Scope</h2>
-        <p>Variables declared outside of any function or block have global scope. They are accessible from anywhere in the code.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code>gobalVar = "I am a global variable"
+        <h1>Sets in Python</h1>
+        <p>A set is an unordered collection of unique elements in Python. Unlike lists or tuples, sets do not allow duplicate values, and their elements are not stored in any particular order. Sets are mutable, meaning you can add or remove items after creation, but the elements themselves must be immutable (like strings, numbers, or tuples).</p>
 
-def displayGlobalVar():
-    print(globalVar) # Accessible here
-
-
-displayGlobalVar() # Output: I am a global variable
-print(globalVar) # Accessible here too</code></pre>
-        <h2>2. Local Scope</h2>
-        <p>Variables declared within a function are local-scoped, meaning they are only accessible within that function.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code>def displayMessage():
-    message = "Hello from inside the function!"
-    print(message) # Accessible here
-
-displayMessage() # Output: Hello from inside the function!
-print(message) # Error: message is not defined</code></pre>
-        <p>In this example, the "message" variable is only accessible within the "displayMessage" function.</p>
-        
-        
-        <h2>3. Enclosing Scope</h2>
-        <p>Enclosing scope is the scope that allows inner functions to access variables from the outer (enclosing) functions. The accessibility is determined by the structure of the code, meaning that inner functions can access variables from their enclosing functions because of their physical placement within the source code.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code>def outerFunction():
-    outerVar = "I am outside!"
-
-def innerFunction():
-    print(outerVar) # Accessible here due to enclosing scope
-
-
-innerFunction()
-
-
-outerFunction() # Output: I am outside!</code></pre>
-        <p>In this example, "innerFunction" can access outerVar because it is enclosing inside "outerFunction".</p>
-        <h2>3. Built-in Scope</h2>
-        <p>Built-in scope in Python refers to the scope that contains names and objects that are always available in Python, without the need for any imports. These are defined by Python itself and include built-in functions, exceptions, and other objects.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code>
-Str="Hello World"
-print(Str)
-print(len(Str))
-print(type(Str))
-# print, len, type, list etc are all built-in.</code></pre>
-
-        <h2>LEGB rule:</h2>
-        <p>The LEGB rule in Python is a guideline that defines the order in which Python looks up variables and names. LEGB stands for "Local, Enclosing, Global, and Built-in", which are the four types of scopes Python uses to resolve names. Here's a breakdown of each scope and how Python searches for names in the LEGB order:</p>
+        <h2>Key Characterstics:</h2>
         <ul>
-            <ul><span>Local Scope:</span>
-                <li>This is the innermost scope.</li>
-                <li>It includes names defined within the current function or block.</li>
-                <li>Python looks here first when trying to resolve a name.</li>
-                <li>If the name is found, Python uses it; if not, it moves to the next scope.</li>
-            </ul>
-            <ul><span>Enclosing scope:</span>
-                <li>This scope comes into play when there are nested functions (a function within another function).</li>
-                <li>It includes names defined in any enclosing functions, but not the global scope.</li>
-                <li>If the name isn't found in the local scope, Python checks the enclosing scope.</li>
-            </ul>
-            <ul><span>Global Scope:</span>
-                <li>This scope contains names defined at the top level of a script or module.</li>
-                <li>Variables in the global scope can be accessed from anywhere in the module or script.</li>
-                <li>If the name isn't found in the local or enclosing scopes, Python looks in the global scope.</li>
-            </ul>
-            <ul><span>Built-in Scope:</span>
-                <li>This is the outermost scope.</li>
-                <li>It contains all the built-in names of Python, such as functions like print(), len(), int(), and keywords.</li>
-                <li>If Python can't find the name in any of the previous scopes, it looks in the built-in scope.</li>
-            </ul>
+            <li><span>Immutable:
+            </span>Once created, the elements in a tuple cannot be changed.</li>
+            <li><span>Unodered:
+            </span>Tuples maintain the order of elements, meaning that the order in which elements are added is preserved.</li>
+            <li><span>Can Contain Mixed Data Types: 
+            </span>Tuples can hold elements of different data types (e.g., integers, strings, and even other tuples).</li>
+            <li><span>Indexable:
+            </span>Elements in a tuple can be accessed by their index, starting from 0.</li>
         </ul>
+
+        <h2>Syntax:</h2>
+        <p>Tuples are defined by enclosing elements within parentheses '()'.</p>
+        <pre class="lang-python"><code># Creating a tuple
+my_tuple = (1, 2, 3, "apple", "banana")
+            
+        </code></pre>
         
+        <h2>Accessing Values</h2>
+        <p>You can access elements in a tuple using indexing and slicing.</p>
+        <h2>Example:</h2>
+        <pre class="lang-python"><code># Accessing elements by index
+print(my_tuple[0])  # Output: 1
+print(my_tuple[3])  # Output: apple
+            
+# Slicing a tuple
+print(my_tuple[1:4])  # Output: (2, 3, 'apple')
+</code></pre>
+
+        <h2>Packing and Unpacking Tuples:</h2>
+        <ul>
+            <li><span>Packing:
+            Assigning multiple values to a single tuple variable.
+            </span></li>
+            <li><span>Unpacking:
+                Extracting values from a tuple into individual variables.
+            </span></li>
+        </ul>
+        <h2>Example:</h2>
+        <pre class="lang-python"><code># Packing
+my_tuple = 1, 2, "apple"
+# Unpacking
+x, y, z = my_tuple
+print(x)  # Output: 1
+print(y)  # Output: 2
+print(z)  # Output: apple 
+        </code></pre>
+        <h2>Nested Tuples:</h2>
+        <p>Tuples can also contain other tuples as elements, allowing for nested data structures.</p>
+        <pre class="lang-python"><code>nested_tuple = (1, 2, (3, 4), 5)
+print(nested_tuple[2])  # Output: (3, 4)
+            </code></pre>
         <h2>Conclusion</h2>
-        <p>Understanding scope is crucial for managing variables and avoiding conflicts in your Python code. By mastering global, local, enclosing, and built-in scope, you can write more efficient, predictable, and maintainable code.</p>
+        <p>Tuples in Python, being immutable, offer only a couple of built-in methods: count() to determine how many times an element appears, and index() to find the position of an element's first occurrence. Although limited, these methods, along with the in operator for checking membership, provide essential functionality for working with tuples effectively.</p>
     </main>
     <script src="../common/common.js"></script>
     <script src="commonPython.js"></script>

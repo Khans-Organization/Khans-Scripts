@@ -16,8 +16,9 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py12.html">Some methods for Dictionaries</a></li>
                 <li class="lists"><a class="anchors" href="py13.html">Tuples</a></li>
                 <li class="lists"><a class="anchors" href="py14.html">Some methods for Tuples</a></li>
-                <li class="lists"><a class="anchors" href="py15.html">Scope</a></li>
-                <li class="lists"><a class="anchors" href="py16.html">Closures</a></li>
+                <li class="lists"><a class="anchors" href="py15.html">Sets</a></li>
+                <li class="lists"><a class="anchors" href="py16.html">Scope</a></li>
+                <li class="lists"><a class="anchors" href="py17.html">Closures</a></li>
                 <li class="lists"><a class="anchors" </a></li>
                 <li class="lists"><a class="anchors" </a></li>            </ul>
       </div>`

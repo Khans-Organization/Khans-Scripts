@@ -20,35 +20,44 @@
 
         <h2>Key Characterstics:</h2>
         <ul>
-            <li><span>Immutable:
-            </span>Once created, the elements in a tuple cannot be changed.</li>
-            <li><span>Ondered:
-            </span>Tuples maintain the order of elements, meaning that the order in which elements are added is preserved.</li>
-            <li><span>Can Contain Mixed Data Types: 
-            </span>Tuples can hold elements of different data types (e.g., integers, strings, and even other tuples).</li>
+            <li><span>Mutable:
+            </span>You can modify a set by adding or removing elements, though the elements themselves must be immutable.</li>
+            <li><span>Unodered:
+            </span>The elements in a set do not follow any particular order.</li>
+            <li><span>Unique elements: 
+            </span> Sets automatically remove duplicates, so each element appears only once.</li>
             <li><span>Indexable:
             </span>Elements in a tuple can be accessed by their index, starting from 0.</li>
         </ul>
 
         <h2>Syntax:</h2>
-        <p>Tuples are defined by enclosing elements within parentheses '()'.</p>
-        <pre class="lang-python"><code># Creating a tuple
-my_tuple = (1, 2, 3, "apple", "banana")
-            
+        <p>You can create a set using curly braces '{}' or the 'set()' function.</p>
+        <pre class="lang-python"><code># Using curly braces
+my_set = {1, 2, 3, 4}
+# Using the set() function
+another_set = set([1, 2, 3, 3, 4])            
         </code></pre>
         
-        <h2>Accessing Values</h2>
-        <p>You can access elements in a tuple using indexing and slicing.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code># Accessing elements by index
-print(my_tuple[0])  # Output: 1
-print(my_tuple[3])  # Output: apple
-            
-# Slicing a tuple
-print(my_tuple[1:4])  # Output: (2, 3, 'apple')
-</code></pre>
+        <h2>Adding and Removing Elements:</h2>
+        <ul>
+            <li><span>Adding:
+                Use 'add()' to add a single element and 'update()' to add multiple elements.
+                <h2>Example:</h2>
+                <pre class="lang-python"><code>my_set = {1, 2, 3}
+my_set.add(4)  # Output: {1, 2, 3, 4}
+my_set.update([5, 6])  # Output: {1, 2, 3, 4, 5, 6}
+        </code></pre>
+            </span></li>
+            <li><span>Remove:</span>
+                Use remove() to remove an element, raising an error if the element is not found. Alternatively, use discard() to remove an element without raising an error. The pop() method removes a random element from the set.
+                <h2>Example:</h2>
+                <pre class="lang-python"><code>my_set.remove(2)  # Removes 2 from the set
+my_set.discard(7)  # Does nothing, as 7 is not in the set
+                            </code></pre>
+            </li>
+        </ul>
 
-        <h2>Packing and Unpacking Tuples:</h2>
+        <h2>Set Operations:</h2>
         <ul>
             <li><span>Packing:
             Assigning multiple values to a single tuple variable.
@@ -71,16 +80,8 @@ print(z)  # Output: apple
         <pre class="lang-python"><code>nested_tuple = (1, 2, (3, 4), 5)
 print(nested_tuple[2])  # Output: (3, 4)
             </code></pre>
-        <h2>5. Looping Through a Dictionary</h2>
-        <p>You can iterate through a dictionary's keys, values, or key-value pairs:</p>
-        <pre class="lang-python"><code>for key in my_dict:
-    print(key, my_dict[key])
-        # or
-for key, value in my_dict.items():
-    print(key, value) 
-</code></pre>
         <h2>Conclusion</h2>
-        <p>Tuples are a powerful way to group related data together in an ordered and immutable fashion. They're commonly used when you want to ensure that the data cannot be changed after creation.</p>
+        <p>Tuples in Python, being immutable, offer only a couple of built-in methods: count() to determine how many times an element appears, and index() to find the position of an element's first occurrence. Although limited, these methods, along with the in operator for checking membership, provide essential functionality for working with tuples effectively.</p>
     </main>
     <script src="../common/common.js"></script>
     <script src="commonPython.js"></script>
