@@ -17,14 +17,15 @@ let common = `<div class="nav red">
 <div class="response red">
       <nav>
             <ul class="ul">
+                  <button id="close2" class="red"><span class="material-symbols-outlined">close</span></button>
                   <li><a class="link navlinks" href="../index.html">Home</a></li>
                   <li><a class="link navlinks" href="#">About Us</a></li>
                   <li><button class="link navlinks btn red" id="btn2">Languages</button></li>
             </ul>
       </nav>
-</div>
 <div class="lang above red">
       <ul>
+            <button id="close3" class="red"><span class="material-symbols-outlined">close</span></button>
             <li class="li"><a class="link langlinks" href="../C/c1.html">C</a></li>
             <li class="li"><a class="link langlinks" href="../JS/js1.html">JavaScript</a></li>
             <li class="li"><a class="link langlinks" href="../PYTHON/py1.html">Python</a></li>
@@ -35,6 +36,8 @@ let common = `<div class="nav red">
 document.body.insertAdjacentHTML('afterbegin', common);
 
 const hamButton = document.querySelector('#ham1');
+const closeButton1 = document.querySelector('#close2');
+const closeButton2 = document.querySelector('#close3');
 const langButton1 = document.querySelector('#btn1');
 const langButton2 = document.querySelector('#btn2');
 const responseDiv = document.querySelector('.response');
@@ -83,20 +86,27 @@ darkMode.forEach(button => {
 });
 // Toggle the navigation for mobile view
 hamButton.addEventListener('click', () => {
-      responseDiv.classList.toggle('below');
+      responseDiv.classList.add('below');
       if (!langDiv.classList.contains('above')) {
-            langDiv.classList.add('above');
+            langDiv.classList.remove('above');
       }
 });
 
 // Toggle language menu
 langButton1.addEventListener('click', () => {
-      langDiv.classList.toggle('above');
+      langDiv.classList.remove('above');
 });
 
 langButton2.addEventListener('click', () => {
-      langDiv.classList.toggle('above');
+      langDiv.classList.remove('above');
 });
+
+closeButton1.addEventListener('click',()=>{
+      responseDiv.classList.remove('below');
+})
+closeButton2.addEventListener('click',()=>{
+      langDiv.classList.add('above');
+})
 
 // Adjust the navigation when resizing
 window.addEventListener('resize', () => {

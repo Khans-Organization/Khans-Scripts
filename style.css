@@ -2,7 +2,7 @@
       margin: 0;
       padding: 0;
       font-family: "Poppins", sans-serif;
-      transition: background-color 0.5s linear, color 0.5s linear;
+      transition: background-color 0.5s linear, color 0.5s linear, transform 0.5s linear;;
 }
 .nav {
       z-index: 2;
@@ -36,6 +36,7 @@
      color: white;
 }
 .ul {
+      padding: 10px 30px;
       display: flex;
       flex-direction: row;
       list-style: none;
@@ -52,6 +53,13 @@
       margin-right: 40px;
 }
 
+#close2 ,#close3 {    
+      cursor: pointer;
+      border-radius: 20px;
+      padding: 0px 5px;
+      color: white;
+      border: 2px solid white;
+}
 
 .navlinks{
       border: 0;
@@ -67,20 +75,19 @@
       text-decoration: none;
 }
 .lang {
-      top: 62px;
+      padding: 20px 0;
+      top: 400px;
       width: 100vw;
       position: absolute;
       z-index: 2;
       text-align: center;  
-      transition: transform 0.5s linear;
 }
 .li {
       padding: 5px;
       list-style: none;
 }
 .above {
-      transform: translateY(-400px);
-      transition: transform 0.5s linear;
+      transform: translateY(-600px);
 }
 .langlinks {
       font-size: 20px;
@@ -109,15 +116,9 @@
       z-index: 2;
       width: 100vw;
       position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: transform 0.5s linear;
-      transform: translate(0, -200px);
-      height: 60px;
+      transform: translate(0, -400px);
 }
 .below {
-      transition: transform 0.5s linear;;
       transform: none;
 }
 
@@ -135,7 +136,7 @@
       }
       .lang {
             border-top: 1px solid white;
-            top: 121px;
+            top: 70px;
       }
       .img img {
             margin: auto;
@@ -147,10 +148,7 @@
       }
 }
 @media screen and (max-width: 500px) {
-      .response {
-            height: 80px;
-            justify-content: center;
-      }
+
       .ul{
             flex-direction: column;
             justify-content: center;
@@ -168,7 +166,7 @@
       }
       .lang {
             border-top: 1px solid white;
-            top: 140px;
+            top: 126px;
       }
       .nav {
             font-size: 18px;
