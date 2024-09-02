@@ -20,59 +20,87 @@
 
         <h2>Key Characterstics:</h2>
         <ul>
-            <li><span>Immutable:
-            </span>Once created, the elements in a tuple cannot be changed.</li>
-            <li><span>Unodered:
-            </span>Tuples maintain the order of elements, meaning that the order in which elements are added is preserved.</li>
-            <li><span>Can Contain Mixed Data Types: 
-            </span>Tuples can hold elements of different data types (e.g., integers, strings, and even other tuples).</li>
-            <li><span>Indexable:
-            </span>Elements in a tuple can be accessed by their index, starting from 0.</li>
+            <li><span>Unordered:
+            </span>Sets do not maintain the order of elements. This means that the items have no index, so you cannot access elements by position.</li>
+            <li><span>Unique:
+            </span>Sets automatically remove duplicate values.</li>
+            <li><span>Immutable Elements:
+            </span>The elements of a set must be immutable (e.g., numbers, strings, or tuples), but the set itself is mutable, allowing you to add or remove items.</li>
         </ul>
 
         <h2>Syntax:</h2>
-        <p>Tuples are defined by enclosing elements within parentheses '()'.</p>
-        <pre class="lang-python"><code># Creating a tuple
-my_tuple = (1, 2, 3, "apple", "banana")
+        <p>You can create a set using curly braces '{}' or the 'set()' function.</p>
+        <pre class="lang-python"><code># Creating a set with curly braces
+my_set = {1, 2, 3, 4, 5}
             
+# Creating a set with the set() function
+another_set = set([1, 2, 3, 4, 5])
         </code></pre>
         
-        <h2>Accessing Values</h2>
-        <p>You can access elements in a tuple using indexing and slicing.</p>
-        <h2>Example:</h2>
-        <pre class="lang-python"><code># Accessing elements by index
-print(my_tuple[0])  # Output: 1
-print(my_tuple[3])  # Output: apple
-            
-# Slicing a tuple
-print(my_tuple[1:4])  # Output: (2, 3, 'apple')
-</code></pre>
-
-        <h2>Packing and Unpacking Tuples:</h2>
+        <h2>Common set operations:</h2>
         <ul>
-            <li><span>Packing:
-            Assigning multiple values to a single tuple variable.
-            </span></li>
-            <li><span>Unpacking:
-                Extracting values from a tuple into individual variables.
-            </span></li>
+            <li><span>Adding elements:</span>
+            Use 'add()' to add a single element to a set.</li>
+            <pre class="lang-python"><code>my_set = {1, 2, 3}
+my_set.add(4)  # Output: {1, 2, 3, 4}
+            </code></pre>
+            <li><span>update():</span>
+            Use 'update()' to add multiple elements</li>
+            <pre class="lang-python"><code>my_set.update([5, 6])
+# output: {1, 2, 3, 4, 5, 6}
+            </code></pre>
+        </ul>
+
+        <h2>Removing Elements:</h2>
+        <p>Removing elements from a set can be done by few ways.</p>
+        <ul>
+            <li><span>remove():
+            </span>Use remove() to remove a specific element (raises an error if the element does not exist).</li>
+            <li><span>discard():
+            </span>Use discard() to remove an element without raising an error if the element is not found.</li>
+            <li><span>pop():</span>
+                Use pop() to remove and return an arbitrary element.</li>
+            <li><span>clear():</span>
+                Use clear() to remove all elements from the set.</li>
+            <li><span>pop():</span>
+                Use pop() to remove and return an arbitrary element.</li></li>
         </ul>
         <h2>Example:</h2>
-        <pre class="lang-python"><code># Packing
-my_tuple = 1, 2, "apple"
-# Unpacking
-x, y, z = my_tuple
-print(x)  # Output: 1
-print(y)  # Output: 2
-print(z)  # Output: apple 
+        <pre class="lang-python"><code>my_set.remove(2)  # Removes 2 from the set
+my_set.discard(3)  # Removes 3 from the set
+my_set.pop()  # Removes and returns an arbitrary element
+my_set.clear()  # Removes all elements from the set            
         </code></pre>
-        <h2>Nested Tuples:</h2>
-        <p>Tuples can also contain other tuples as elements, allowing for nested data structures.</p>
-        <pre class="lang-python"><code>nested_tuple = (1, 2, (3, 4), 5)
-print(nested_tuple[2])  # Output: (3, 4)
+
+        <h2>Set operations:</h2>
+        <ul>
+            <li><span>Union:</span>
+                Combines elements from two sets, returning a set with all unique elements from both.</li>
+                <pre class="lang-python"><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}            
+union_set = set1.union(set2)  # output: {1, 2, 3, 4, 5}
             </code></pre>
+            <li><span>intersection:</span>
+                Returns a set containing only the elements found in both sets.</li>
+                <pre class="lang-python"><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}            
+intersection_set = set1.intersection(set2)  #  output: {3}
+            </code></pre>
+            <li><span>difference:</span>
+                Returns a set with elements that are in the first set but not in the second.</li>
+                <pre class="lang-python"><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}            
+difference_set = set1.difference(set2)  # output {1, 2}
+            </code></pre>
+            <li><span>Symmetric difference:</span>
+                Returns a set with elements that are in either of the sets but not in both.</li>         
+            <pre class="lang-python"><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}            
+sym_diff_set = set1.symmetric_difference(set2)  # output {1, 2, 4, 5}
+            </code></pre>      
+        </ul>
         <h2>Conclusion</h2>
-        <p>Tuples in Python, being immutable, offer only a couple of built-in methods: count() to determine how many times an element appears, and index() to find the position of an element's first occurrence. Although limited, these methods, along with the in operator for checking membership, provide essential functionality for working with tuples effectively.</p>
+        <p>Sets are a powerful tool in Python when working with unique elements, performing mathematical operations, or efficiently checking membership. They are versatile and can be combined with other data structures for more complex tasks.</p>
     </main>
     <script src="../common/common.js"></script>
     <script src="commonPython.js"></script>
