@@ -20,11 +20,11 @@
         <h2>1. Overview of BOM</h2>
         <p>The BOM includes several objects that represent the browser and its various aspects. The most important of these objects are:</p>
         <ul>
-            <li>"window"</li>
-            <li>"navigator"</li>
-            <li>"screen"</li>
-            <li>"location"</li>
-            <li>"history"</li>
+            <li><span>"window"</span></li>
+            <li><span>"navigator"</span></li>
+            <li><span>"screen"</span></li>
+            <li><span>"location"</span></li>
+            <li><span>"history"</span></li>
         </ul>
         <p>Unlike the Document Object Model (DOM), which deals with the structure of the web page, the BOM is concerned with the browser environment.</p>
         <h2>2. Key BOM Objects</h2>
@@ -33,21 +33,21 @@
         <p>The "window" object is the global object for the browser environment. All global JavaScript variables, functions, and objects are members of the "window" object.</p>
         <h2>Key Properties and Methods:</h2>
         <ul>
-            <li>"window.alert(message)": Displays an alert box with a specified message.</li>
-            <li>"window.setTimeout(function, milliseconds)": Executes a function after a specified delay.</li>
-            <li>"window.setInterval(function, milliseconds)": Repeatedly executes a function at specified intervals.</li>
-            <li>"window.innerWidth" and "window.innerHeight": Returns the width and height of the browser's viewport.</li>
+            <li><span>"window.alert(message)":</span> Displays an alert box with a specified message.</li>
+            <li><span>"window.setTimeout(function, milliseconds)":</span> Executes a function after a specified delay.</li>
+            <li><span>"window.setInterval(function, milliseconds)":</span> Repeatedly executes a function at specified intervals.</li>
+            <li><span>"window.innerWidth" and "window.innerHeight":</span> Returns the width and height of the browser's viewport.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>window.alert("Hello, World!");</code></pre>
         <p>Note: Since "window" is the global object, its methods and properties can be accessed without explicitly writing "window".</p>
-        <h2>a. "navigator" Object</h2>
+        <h2>b. "navigator" Object</h2>
         <p>The "navigator" object provides information about the browser and the user's environment, such as the browser's name, version, and operating system.</p>
         <h2>Key Properties and Methods:</h2>
         <ul>
-            <li>"navigator.userAgent": Returns the user-agent string for the browser.</li>
-            <li>"navigator.language": Returns the preferred language of the user.</li>
-            <li>"navigator.platform": Returns the platform on which the browser is running (e.g., "Win32").</li>
+            <li><span>"navigator.userAgent":</span> Returns the user-agent string for the browser.</li>
+            <li><span>"navigator.language":</span> Returns the preferred language of the user.</li>
+            <li><span>"navigator.platform":</span> Returns the platform on which the browser is running (e.g., "Win32").</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>console.log(navigator.userAgent);</code></pre>
@@ -56,9 +56,9 @@
         <p>The "screen" object contains information about the user's screen, such as its size and color depth.</p>
         <h2>Key Properties and Methods:</h2>
         <ul>
-            <li>"screen.width" and "screen.height": Returns the width and height of the user's screen.</li>
-            <li>"screen.availWidth" and "screen.availHeight": Returns the width and height of the screen, excluding interface features like the taskbar.</li>
-            <li>"screen.colorDepth": Returns the number of bits used to display a single color.</li>
+            <li><span>"screen.width" and "screen.height":</span> Returns the width and height of the user's screen.</li>
+            <li><span>"screen.availWidth" and "screen.availHeight":</span> Returns the width and height of the screen, excluding interface features like the taskbar.</li>
+            <li><span>"screen.colorDepth":</span> Returns the number of bits used to display a single color.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>console.log("Screen width: " + screen.width);
@@ -67,12 +67,12 @@ console.log("Screen height: " + screen.height);</code></pre>
         <p>The "location" object represents the current URL of the browser. It can be used to get the current URL, navigate to a new URL, or reload the page.</p>
         <h2>Key Properties and Methods:</h2>
         <ul>
-            <li>"location.href": Returns the full URL of the current page.</li>
-            <li>"location.hostname": Returns the domain name of the web host.</li>
-            <li>"location.pathname": Returns the path of the current page.</li>
-            <li>"location.search": Returns the query string of the URL.</li>
-            <li>"location.assign(url)"": Loads a new document at the specified URL.</li>
-            <li>"location.reload()"": Reloads the current page.</li>
+            <li><span>"location.href":</span> Returns the full URL of the current page.</li>
+            <li><span>"location.hostname":</span> Returns the domain name of the web host.</li>
+            <li><span>"location.pathname":</span> Returns the path of the current page.</li>
+            <li><span>"location.search":</span> Returns the query string of the URL.</li>
+            <li><span>"location.assign(url)":</span> Loads a new document at the specified URL.</li>
+            <li><span>"location.reload()":</span> Reloads the current page.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>console.log("Current URL: " + location.href);
@@ -81,19 +81,19 @@ location.assign("https://www.example.com");</code></pre>
         <p>The "history" object provides access to the browser's session history, allowing navigation backward and forward through the user's history.</p>
         <h2>Key Properties and Methods:</h2>
         <ul>
-            <li>"history.back()": Loads the previous URL in the history list.</li>
-            <li>"history.forward()": Loads the next URL in the history list.</li>
-            <li>"history.go(n)": Loads a specific page from the session history, where n can be a positive or negative integer.</li>
+            <li><span>"history.back()":</span> Loads the previous URL in the history list.</li>
+            <li><span>"history.forward()":</span> Loads the next URL in the history list.</li>
+            <li><span>"history.go(n)":</span> Loads a specific page from the session history, where n can be a positive or negative integer.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>history.back();  // Goes back to the previous page</code></pre>
         
         <h2>4. Common Use Cases of BOM</h2>
         <ul>
-            <li>Managing Pop-ups: Opening and closing browser windows or tabs.</li>
-            <li>Controlling Navigation: Redirecting users to different URLs or reloading the page.</li>
-            <li>Gathering Environment Information: Detecting user-agent, screen resolution, and language preferences.</li>
-            <li>Interacting with the User: Using methods like "alert()", "confirm()", and "prompt()" to interact with users.</li>
+            <li><span>Managing Pop-ups:</span> Opening and closing browser windows or tabs.</li>
+            <li><span>Controlling Navigation:</span> Redirecting users to different URLs or reloading the page.</li>
+            <li><span>Gathering Environment Information:</span> Detecting user-agent, screen resolution, and language preferences.</li>
+            <li><span>Interacting with the User:</span> Using methods like "alert()", "confirm()", and "prompt()" to interact with users.</li>
         </ul>
         
         <h2>Conclusion</h2>

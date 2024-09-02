@@ -21,10 +21,10 @@
         <p>"Object.seal()" seals an object, preventing new properties from being added and marking all existing properties as non-configurable. However, it does allow the modification of existing property values.</p>
         <h3>Key Points:</h3>
         <ul>
-            <li>Cannot Add New Properties: Once an object is sealed, you cannot add new properties to it.</li>
-            <li>Cannot Delete Properties: Properties cannot be deleted from a sealed object.</li>
-            <li>Can Modify Existing Properties: You can still change the values of the existing properties.</li>
-            <li>Non-Configurable Properties: All properties become non-configurable, meaning you cannot change their property descriptors (e.g., convert a data property to an accessor property).</li>
+            <li><span>Cannot Add New Properties:</span> Once an object is sealed, you cannot add new properties to it.</li>
+            <li><span>Cannot Delete Properties:</span> Properties cannot be deleted from a sealed object.</li>
+            <li><span>Can Modify Existing Properties:</span> You can still change the values of the existing properties.</li>
+            <li><span>Non-Configurable Properties:</span> All properties become non-configurable, meaning you cannot change their property descriptors (e.g., convert a data property to an accessor property).</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>const user = {
@@ -44,10 +44,10 @@ console.log(user);  // Output: { name: "Bob", age: 25 }</code></pre>
         <p>"Object.freeze()" freezes an object, making it immutable. This means you cannot add, delete, or modify any properties of the object.</p>
         <h3>Key Points:</h3>
         <ul>
-            <li>Cannot Add New Properties: No new properties can be added to a frozen object.</li>
-            <li>Cannot Delete Properties: Properties cannot be deleted from a frozen object.</li>
-            <li>Cannot Modify Existing Properties: You cannot change the values of existing properties.</li>
-            <li>Non-Configurable and Non-Writable: All properties become non-configurable and non-writable, meaning you cannot change their values or property descriptors.</li>
+            <li><span>Cannot Add New Properties:</span> No new properties can be added to a frozen object.</li>
+            <li><span>Cannot Delete Properties:</span> Properties cannot be deleted from a frozen object.</li>
+            <li><span>Cannot Modify Existing Properties:</span> You cannot change the values of existing properties.</li>
+            <li><span>Non-Configurable and Non-Writable:</span> All properties become non-configurable and non-writable, meaning you cannot change their values or property descriptors.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>const settings = {

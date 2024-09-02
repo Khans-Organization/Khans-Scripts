@@ -22,9 +22,9 @@
         <h2>Syntax:</h2>
         <pre class="lang-javascript"><code>setTimeout(function, delay, arg1, arg2, ...)</code></pre>
         <ul>
-            <li>function: The function to be executed after the delay.</li>
-            <li>delay: The time, in milliseconds, after which the function should be executed.</li>
-            <li>arg1, arg2, ... (optional): Additional arguments that can be passed to the function when it is executed.</li>
+            <li><span>function:</span> The function to be executed after the delay.</li>
+            <li><span>delay:</span> The time, in milliseconds, after which the function should be executed.</li>
+            <li><span>arg1, arg2, ... (optional):</span> Additional arguments that can be passed to the function when it is executed.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>function greet() {
@@ -46,9 +46,9 @@ setTimeout(greet, 2000); // Prints "Hello, World!" after 2 seconds</code></pre>
         <h2>Syntax:</h2>
         <pre class="lang-javascript"><code>setInterval(function, interval, arg1, arg2, ...)</code></pre>
         <ul>
-            <li>function: The function to be executed repeatedly.</li>
-            <li>interval: The time, in milliseconds, between each execution of the function.</li>
-            <li>arg1, arg2, ... (optional): Additional arguments that can be passed to the function each time it is executed.</li>
+            <li><span>function:</span> The function to be executed repeatedly.</li>
+            <li><span>interval:</span> The time, in milliseconds, between each execution of the function.</li>
+            <li><span>arg1, arg2, ... (optional):</span> Additional arguments that can be passed to the function each time it is executed.</li>
         </ul>
         <h2>Example:</h2>
         <pre class="lang-javascript"><code>function displayTime() {
@@ -61,11 +61,11 @@ setInterval(displayTime, 1000); // Prints the current time every second</code></
 
         <h2>3. Clearing Timers</h2>
         <ul>
-            <li>"clearTimeout()": If you need to cancel the execution of a function scheduled with "setTimeout()", you can use "clearTimeout()"</li>
+            <li><span>"clearTimeout()":</span> If you need to cancel the execution of a function scheduled with "setTimeout()", you can use "clearTimeout()"</li>
             <h2>Example:</h2>
             <pre class="lang-javascript"><code>let timeoutId = setTimeout(greet, 2000);
 clearTimeout(timeoutId); // Cancels the timeout, so "Hello, World!" won't be printed</code></pre>
-            <li>"clearInterval()": Similarly, to stop a repeated execution set by "setInterval()", you can use "clearInterval()".</li>
+            <li><span>"clearInterval()":</span> Similarly, to stop a repeated execution set by "setInterval()", you can use "clearInterval()".</li>
             <h2>Example:</h2>
             <pre class="lang-javascript"><code>let intervalId = setInterval(displayTime, 1000);
 setTimeout(function() {

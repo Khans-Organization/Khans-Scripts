@@ -21,10 +21,10 @@
         <p>Local Storage is part of the Web Storage API, which provides mechanisms for storing data on the client-side. Unlike cookies, the data stored in local storage is not sent to the server with each HTTP request, making it more efficient for storing larger amounts of data.</p>
         <h2>2. Key Characteristics of Local Storage</h2>
         <ul>
-            <li>Persistent Storage: Data stored in local storage remains available even after the browser is closed and reopened.</li>
-            <li>Key-Value Storage: Data is stored as key-value pairs, with both keys and values being strings.</li>
-            <li>Synchronous API: Operations on local storage are synchronous, meaning they block the execution of code until the operation is complete.</li>
-            <li>Storage Limit: Typically, local storage can store up to 5MB of data per domain, though this may vary slightly between browsers.</li>
+            <li><span>Persistent Storage:</span> Data stored in local storage remains available even after the browser is closed and reopened.</li>
+            <li><span>Key-Value Storage:</span> Data is stored as key-value pairs, with both keys and values being strings.</li>
+            <li><span>Synchronous API:</span> Operations on local storage are synchronous, meaning they block the execution of code until the operation is complete.</li>
+            <li><span>Storage Limit:</span> Typically, local storage can store up to 5MB of data per domain, though this may vary slightly between browsers.</li>
         </ul>
         <h2>3. Basic Operations</h2>
         <p>Local Storage provides several methods to interact with stored data:</p>
@@ -77,16 +77,16 @@ var retrievedUser = JSON.parse(localStorage.getItem('user'));
 console.log(retrievedUser.name); // Outputs: John</code></pre>
         <h2>6. Use Cases for Local Storage</h2>
         <ul>
-            <li>User Preferences: Storing user settings like themes, languages, and other preferences.</li>
-            <li>State Management: Maintaining the state of a web application across sessions.</li>
-            <li>Temporary Data Storage: Storing data that needs to persist temporarily but doesn’t require server-side storage.</li>
-            <li>Offline Access: Storing data for offline access in web applications that need to function without an internet connection.</li>
+            <li><span>User Preferences:</span> Storing user settings like themes, languages, and other preferences.</li>
+            <li><span>State Management:</span> Maintaining the state of a web application across sessions.</li>
+            <li><span>Temporary Data Storage:</span> Storing data that needs to persist temporarily but doesn’t require server-side storage.</li>
+            <li><span>Offline Access:</span> Storing data for offline access in web applications that need to function without an internet connection.</li>
         </ul>
         
         <h2>7. Security Considerations</h2>
         <ul>
-            <li>Data Sensitivity: Avoid storing sensitive information like passwords, tokens, or personal data in local storage, as it is accessible via JavaScript.</li>
-            <li>Cross-Site Scripting (XSS): Local Storage is susceptible to XSS attacks, where malicious scripts can access stored data. Always sanitize and validate data stored in or retrieved from local storage.</li>
+            <li><span>Data Sensitivity:</span> Avoid storing sensitive information like passwords, tokens, or personal data in local storage, as it is accessible via JavaScript.</li>
+            <li><span>Cross-Site Scripting (XSS):</span> Local Storage is susceptible to XSS attacks, where malicious scripts can access stored data. Always sanitize and validate data stored in or retrieved from local storage.</li>
         </ul>
         <h2>Conclusion</h2>
         <p>Local Storage is a powerful and convenient way to store persistent data on the client side. Its simplicity, persistence, and efficiency make it ideal for storing user preferences, maintaining state, and enhancing the user experience in web applications. However, due to its security implications, it should be used carefully, especially when handling sensitive information.</p>

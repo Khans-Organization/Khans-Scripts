@@ -30,11 +30,11 @@ console.log(shallowCopy);    // Output: [1, 2, 3, { a: 20 }]</code></pre>
         <p>In this example, "originalArray" and "shallowCopy" both reference the same nested object "{ a: 10 }". When the nested object's property is modified in the copy, it also affects the original array.</p>
         <h3>Common Methods for Creating a Shallow Copy:</h3>
         <ul>
-            <li>Spread Operator "(...)": Creates a shallow copy of an array or object.</li>
+            <li><span>Spread Operator "(...)":</span> Creates a shallow copy of an array or object.</li>
             <pre class="lang-javascript"><code>const shallowCopy = { ...originalObject };</code></pre>
-            <li>Object.assign(): Creates a shallow copy of an object.</li>
+            <li><span>Object.assign():</span> Creates a shallow copy of an object.</li>
             <pre class="lang-javascript"><code>const shallowCopy = Object.assign({}, originalObject);</code></pre>
-            <li>Array.slice(): Creates a shallow copy of an array.</li>
+            <li><span>Array.slice():</span> Creates a shallow copy of an array.</li>
             <pre class="lang-javascript"><code>const shallowCopy = originalArray.slice();</code></pre>
         </ul>
         <h2>2. What is a Deep Copy?</h2>
@@ -51,13 +51,13 @@ console.log(deepCopy);       // Output: [1, 2, 3, { a: 20 }]</code></pre>
         
         <h3>Common Methods for Creating a Shallow Copy:</h3>
         <ul>
-            <li>"JSON.parse()" and "JSON.stringify()": Converts the object to a JSON string and back, effectively creating a deep copy. However, this method has limitations:</li>
-            <ul>
+            <li><span>"JSON.parse()" and "JSON.stringify()":</span> Converts the object to a JSON string and back, effectively creating a deep copy. However, this method has limitations:</li>
+            <ul style="padding-left: 40px;">
                 <li>It does not copy functions.</li>
                 <li>It does not handle special data types like "Date", "RegExp", "Map", "Set", etc</li>
             </ul>
             <pre class="lang-javascript"><code>const deepCopy = JSON.parse(JSON.stringify(originalObject));<code></pre>
-            <li>Custom Recursive Function: A more robust solution that handles all data types and nested structures.</li>
+            <li><span>Custom Recursive Function:</span> A more robust solution that handles all data types and nested structures.</li>
             <pre class="lang-javascript"><code>function deepCopy(obj) {
     if (obj === null || typeof obj !== 'object') {
         return obj;
@@ -77,21 +77,21 @@ console.log(deepCopy);       // Output: [1, 2, 3, { a: 20 }]</code></pre>
         </ul>
         <h2>3. Key Differences Between Shallow Copy and Deep Copy:</h2>
         <ul>
-            <li>Reference to Nested Objects:</li>
-            <ul>
-                <li>Shallow Copy: Copies references to nested objects, not the objects themselves.</li>
-                <li>Deep Copy: Creates a completely independent copy of all nested objects.</li>
+            <li><span>Reference to Nested Objects:</span></li>
+            <ul style="padding-left: 40px;">
+                <li><span>Shallow Copy:</span> Copies references to nested objects, not the objects themselves.</li>
+                <li><span>Deep Copy:</span> Creates a completely independent copy of all nested objects.</li>
             </ul>
-            <li>Performance:</li>
-            <ul>
-                <li>Shallow Copy: Generally faster and requires less memory, but may lead to unintended side effects.</li>
-                <li>Deep Copy: More computationally expensive, but ensures that changes to the copy do not affect the original.</li>
+            <li><span>Performance:</span></li>
+            <ul style="padding-left: 40px;"> 
+                <li><span>Shallow Copy:</span> Generally faster and requires less memory, but may lead to unintended side effects.</li>
+                <li><span>Deep Copy:</span> More computationally expensive, but ensures that changes to the copy do not affect the original.</li>
             </ul>
         </ul>
         <h2>4. When to Use Each?</h2>
-        <ul>
-            <li>Shallow Copy: Suitable when you are dealing with simple objects or arrays without nested structures, or when you know that the nested structures do not need to be independently modified.</li>
-            <li>Deep Copy: Necessary when you have complex objects or arrays with nested structures, and you need to ensure that the copy is completely independent of the original.</li>
+        <ul style="padding-left: 40px;">
+            <li><span>Shallow Copy:</span> Suitable when you are dealing with simple objects or arrays without nested structures, or when you know that the nested structures do not need to be independently modified.</li>
+            <li><span>Deep Copy:</span> Necessary when you have complex objects or arrays with nested structures, and you need to ensure that the copy is completely independent of the original.</li>
         </ul>
         
         <h2>Conclusion</h2>

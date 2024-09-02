@@ -27,6 +27,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="js23.html">cloneNode()</a></li>
                 <li class="lists"><a class="anchors" href="js24.html">Event Delegation</a></li>
                 <li class="lists"><a class="anchors" href="js24.html">Local Storage</a></li>
+                <li class="lists"><a class="anchors" href="js25.html">Synchronous vs. Asynchronous</a></li>
                 <li class="lists"><a class="anchors"></a></li>
                 <li class="lists"><a class="anchors"></a></li>
             </ul>

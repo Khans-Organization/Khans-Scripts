@@ -22,8 +22,8 @@
         <h2>Syntax</h2>
         <pre class="lang-javascript"><code>var clone = element.cloneNode([deep]);</code></pre>
         <ul>
-            <li>"deep" (optional): A Boolean value that determines whether the cloning should be deep or shallow.</li>
-            <ul>
+            <li><span>"deep" (optional):</span> A Boolean value that determines whether the cloning should be deep or shallow.</li>
+            <ul style="padding-left: 40px;">
                 <li>If "true", the node and its entire subtree (all its child elements) are cloned.</li>
                 <li>If "false" or omitted, only the node itself is cloned, and its children are not.</li>
             </ul>
@@ -55,14 +55,14 @@ document.body.appendChild(deepClone);</code></pre>
 
         <h2>2. Practical Use Cases</h2>
         <ul>
-            <li>Duplicating Form Elements: You can clone form elements like input fields or entire forms to allow users to add multiple entries.</li>
-            <li>Creating Multiple UI Components: Clone template elements like cards, lists, or other components to dynamically generate content on the page.</li>
-            <li>Saving Time in DOM Manipulation: When you need multiple instances of a similar structure, "cloneNode()" offers a fast and efficient way to duplicate elements.</li>
+            <li><span>Duplicating Form Elements:</span> You can clone form elements like input fields or entire forms to allow users to add multiple entries.</li>
+            <li><span>Creating Multiple UI Components:</span> Clone template elements like cards, lists, or other components to dynamically generate content on the page.</li>
+            <li><span>Saving Time in DOM Manipulation:</span> When you need multiple instances of a similar structure, "cloneNode()" offers a fast and efficient way to duplicate elements.</li>
         </ul>
         <h2>3. Caveats</h2>
         <ul>
-            <li>Event Listeners Are Not Cloned: The "cloneNode()" method does not clone event listeners attached to the original element. If you need the clone to have the same event listeners, you'll have to reattach them manually after cloning.</li>
-            <li>IDs and Uniqueness: If the original element has an "id" attribute, the clone will also have the same "id". Since IDs must be unique within a document, you should modify or remove the "id" attribute on the cloned element to avoid conflicts.</li>
+            <li><span>Event Listeners Are Not Cloned:</span> The "cloneNode()" method does not clone event listeners attached to the original element. If you need the clone to have the same event listeners, you'll have to reattach them manually after cloning.</li>
+            <li><span>IDs and Uniqueness:</span> If the original element has an "id" attribute, the clone will also have the same "id". Since IDs must be unique within a document, you should modify or remove the "id" attribute on the cloned element to avoid conflicts.</li>
         </ul>
             <h2>4. Example with Event Listeners</h2>
             <p>If you need to clone an element along with its event listeners, you might do something like this:</p>

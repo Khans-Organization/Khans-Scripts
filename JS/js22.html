@@ -51,11 +51,11 @@ button.addEventListener('mouseout', function() {
         <p>When an event occurs, an event object is automatically passed to the event handler. This object contains useful information about the event, such as the type of event, the target element, and details about the user interaction.</p>
         <h3>Common Properties of the Event Object:</h3>
         <ul>
-            <li>"type": The type of the event (e.g., "click", "keydown").</li>
-            <li>"target": The element that triggered the event.</li>
-            <li>"currentTarget": The element to which the event handler is attached.</li>
-            <li>"preventDefault()": Prevents the default action associated with the event.</li>
-            <li>"stopPropagation()": Stops the event from bubbling up to parent elements.</li>
+            <li><span>"type":</span> The type of the event (e.g., "click", "keydown").</li>
+            <li><span>"target":</span> The element that triggered the event.</li>
+            <li><span>"currentTarget":</span> The element to which the event handler is attached.</li>
+            <li><span>"preventDefault()":</span> Prevents the default action associated with the event.</li>
+            <li><span>"stopPropagation()":</span> Stops the event from bubbling up to parent elements.</li>
         </ul>
         <h3>Example:</h3>
         <pre class="lang-javascript"><code>button.addEventListener('click', function(event) {
@@ -65,8 +65,8 @@ button.addEventListener('mouseout', function() {
         <h2>4. Event Bubbling and Capturing</h2>
         <p>When an event occurs in the DOM, it does not trigger only on the target element but also on all its parent elements in a process called event propagation. There are two phases of event propagation:</p>
         <ul>
-            <li>Event Bubbling: The event starts at the target element and bubbles up to the root of the DOM tree.</li>
-            <li>Event Capturing (Trickling): The event starts from the root and trickles down to the target element.</li>
+            <li><span>Event Bubbling:</span> The event starts at the target element and bubbles up to the root of the DOM tree.</li>
+            <li><span>Event Capturing (Trickling):</span> The event starts from the root and trickles down to the target element.</li>
         </ul>
         <p>By default, events bubble up, but you can capture them during the capturing phase by setting the third parameter of "addEventListener()" to "true".</p>
         <h3>Example:</h3>
@@ -93,11 +93,11 @@ button.addEventListener('click', handleClick);
 button.removeEventListener('click', handleClick);</code></pre>
             <h2>6. Common Use Cases of Events</h2>
             <ul>
-                <li>Form Validation: Validating user input before submission and providing feedback..</li>
-                <li>Dynamic Content Update: Changing content based on user actions, like showing or hiding elements.</li>
-                <li>Interactive UI Components: Creating menus, modals, sliders, and other interactive elements.</li>
-                <li>Tracking User Behavior: Monitoring clicks, key presses, and other interactions for analytics.</li>
-                <li>Handling Keyboard Shortcuts: Implementing custom keyboard shortcuts for improved user experience.</li>
+                <li><span>Form Validation:</span> Validating user input before submission and providing feedback..</li>
+                <li><span>Dynamic Content Update:</span> Changing content based on user actions, like showing or hiding elements.</li>
+                <li><span>Interactive UI Components:</span> Creating menus, modals, sliders, and other interactive elements.</li>
+                <li><span>Tracking User Behavior:</span> Monitoring clicks, key presses, and other interactions for analytics.</li>
+                <li><span>Handling Keyboard Shortcuts:</span> Implementing custom keyboard shortcuts for improved user experience.</li>
             </ul>
             <h2>Conclusion</h2>
             <p>Events are a powerful tool in JavaScript that allow you to make your web pages interactive and responsive to user actions. By understanding how to handle events effectively, you can create dynamic, user-friendly web applications that react to user inputs in real time.</p>

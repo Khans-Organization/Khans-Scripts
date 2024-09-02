@@ -24,9 +24,9 @@
         <p>When an event occurs on a child element, it propagates (or bubbles) up through its ancestors in the DOM tree. By listening for events on a common ancestor (such as a parent element), you can detect and respond to events on the child elements.</p>
         <h2>3. Advantages of Event Delegation</h2>
         <ul>
-            <li>Efficiency: Instead of attaching multiple event listeners to individual elements, a single listener on a parent element can manage events for all child elements.</li>
-            <li>Dynamic Elements: It easily handles dynamically added elements without needing to reassign event listeners.</li>
-            <li>Cleaner Code: Reduces code duplication and complexity, making your codebase cleaner and easier to maintain.</li>
+            <li><span>Efficiency:</span> Instead of attaching multiple event listeners to individual elements, a single listener on a parent element can manage events for all child elements.</li>
+            <li><span>Dynamic Elements:</span> It easily handles dynamically added elements without needing to reassign event listeners.</li>
+            <li><span>Cleaner Code:</span> Reduces code duplication and complexity, making your codebase cleaner and easier to maintain.</li>
         </ul>
 
         <h2>4. Syntax and Example</h2>
@@ -90,13 +90,13 @@ list.addEventListener('mouseout', function(event) {
 
         <h2>7. Caveats of Event Delegation</h2>
         <ul>
-            <li>Specificity: You need to ensure that the event handler correctly identifies the target element, especially in complex DOM structures.</li>
-            <li>Performance: In some cases, such as when dealing with a large number of child elements and complex DOM trees, event delegation might introduce a slight overhead, though this is generally outweighed by its benefits.</li>
+            <li><span>Specificity:</span> You need to ensure that the event handler correctly identifies the target element, especially in complex DOM structures.</li>
+            <li><span>Performance:</span> In some cases, such as when dealing with a large number of child elements and complex DOM trees, event delegation might introduce a slight overhead, though this is generally outweighed by its benefits.</li>
         </ul>
        
             
         <h2>Conclusion</h2>
-        <p>Event delegation is a powerful technique in JavaScript that enhances performance, reduces redundancy, and simplifies code management, especially when dealing with numerous elements or dynamically generated content. By attaching event listeners to parent elements and leveraging event propagation, you can efficiently manage interactions with child elements in a scalable and maintainable way.</p>
+        <p>E<span>vent delegation is a powerful technique in JavaScript that enhances performance, reduces redundancy, and simplifies code management, especially when dealing with numerous elements or dynamically generated content. By attaching event listeners to parent elements and leveraging event propagation, you can efficiently manage interactions with child elements in a scalable and maintainable way.</span></p>
       </main>
       <script src="../common/common.js"></script>
       <script src="commonjs.js"></script>
