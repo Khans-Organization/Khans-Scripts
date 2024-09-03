@@ -29,7 +29,7 @@ if (JSON.parse(myStorage.getItem('val')) === 1) {
 
 Array.from(darkMode).forEach((val)=>{
     val.addEventListener('click',()=>{
-        if (document.querySelector('#ham2').classList.contains('whiteBack') && document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close').classList.contains('red')) {
+        if (document.querySelector('#ham2').classList.contains('whiteBack') && document.querySelector('.sidebar').classList.contains('red') && document.querySelector('#close1').classList.contains('red')) {
             document.querySelector('#ham2').classList.add('white');
             document.querySelector('#ham2').classList.remove('whiteBack');
             document.querySelector('#ham2').classList.add('black');

@@ -16,8 +16,8 @@ let common = `<div class="nav red">
 </div>
 <div class="response red">
       <nav>
+      <button id="close2" class="red"><span class="material-symbols-outlined">close</span></button>
             <ul class="ul">
-                  <button id="close2" class="red"><span class="material-symbols-outlined">close</span></button>
                   <li><a class="link navlinks" href="../index.html">Home</a></li>
                   <li><a class="link navlinks" href="#">About Us</a></li>
                   <li><button class="link navlinks btn red" id="btn2">Languages</button></li>
