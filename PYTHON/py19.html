@@ -22,32 +22,44 @@
             <h2>Opening a file:</h2>
             <p>In Python, the 'open()' function is used to open a file.</p> 
             <h2>Syntax:</h2>
-            <p class="history"> </p>
             <pre class="lang-python"><code>file_object = open(filename, mode)</code></pre>
             <h2>Explanation:</h2>
-            <ul>
-                  <li><span>Mutable and Immutable</span></li>
+       
                   <ul>
                         <li><span>filename:</span></li>
                         The name (and path) of the file to open.
-                        <li><span>mode:</span></li>
-                        A string that specifies the mode in which the file is opened. Common modes include:
+                        <li><span>mode:</span>
+                              A string that specifies the mode in which the file is opened. Common modes include:</li>
                         <ul>
-                              <li><span>'r':</span></li>
-                              Read (default mode) - opens the file for reading.
-                              <li><span>'w':</span></li>
-                              Write - opens the file for writing (creates a new file or truncates an existing file).
-                              <li><span>'a':</span></li>
-                              Append - opens the file for writing, appending to the end of the file if it exists.
-                              <li><span>'b':</span></li>
-                              Binary mode - opens the file in binary mode (e.g., 'rb' or 'wb').
-                              <li><span>'+':</span></li>
-                              Update mode - allows both reading and writing (e.g., 'r+', 'w+').
+                              <li><span>'r':</span>Read (default mode) - opens the file for reading.</li>
+                              
+                              <li><span>'w':</span>Write - opens the file for writing (creates a new file or truncates an existing file).</li>
+                              <li><span>'a':</span>Append - opens the file for writing, appending to the end of the file if it exists.</li>
+                              <li><span>'b':</span>Binary mode - opens the file in binary mode (e.g., 'rb' or 'wb').</li>
+                              <li><span>'+':</span>Update mode - allows both reading and writing (e.g., 'r+', 'w+').</li>
                         </ul>
                   </ul>
 
                   <h2>Reading from a file:</h2>
                   <p>You can read the contents of a file using several methods:</p>
+                  <ul>
+                        <li><span>read()</span>
+                        Reads the entire file</li>
+                        <h2>Example:</h2>
+                        <pre class="lang-python"><code>with open('example.txt', 'r') as file:
+content = file.read()
+print(content)
+</code></pre>
+                        <li><span>readline()</span>
+                        Reads one line at a time</li>
+                        <h2>Example:</h2>
+                        <pre class="lang-python"><code>with open('example.txt', 'r') as file:
+line = file.readline()
+while line:
+print(line, end='')
+line = file.readline()                          
+</code></pre>
+                  </ul>
             <h2>Conclusion</h2>
             Understanding how to declare variables properly is crucial for writing clean, maintainable, and error-free Python code. Choosing the right words based on the value of variables helps to maintain code and makes code more readable.
 
