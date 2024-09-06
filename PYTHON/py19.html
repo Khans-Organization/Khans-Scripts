@@ -43,14 +43,14 @@
                   <h2>Reading from a file:</h2>
                   <p>You can read the contents of a file using several methods:</p>
                   <ul>
-                        <li><span>read()</span>
+                        <li><span>read():</span>
                         Reads the entire file</li>
                         <h2>Example:</h2>
                         <pre class="lang-python"><code>with open('example.txt', 'r') as file:
 content = file.read()
 print(content)
 </code></pre>
-                        <li><span>readline()</span>
+                        <li><span>readline():</span>
                         Reads one line at a time</li>
                         <h2>Example:</h2>
                         <pre class="lang-python"><code>with open('example.txt', 'r') as file:
@@ -58,10 +58,57 @@ line = file.readline()
 while line:
 print(line, end='')
 line = file.readline()                          
-</code></pre>
+</code></pre>           
+                        <li><span>readlines():</span>
+                        Reads all lines into a list.</li>
+                        <h2>Example:</h2>
+                        <pre class="lang-python"><code>with open('example.txt', 'r') as file:
+lines = file.readlines()
+for line in lines:
+print(line, end='')
+                        </code></pre>    
+
                   </ul>
+                  <h2>Writing to a File</h2>
+                  <p>To write to a file, you use the 'write()' method or the 'writelines()' method:</p>
+                  <ul>
+                        <li><span>write()</span>
+                        Writes a string to the file.</li>
+                        <h2>Example:</h2>
+                        <pre class="lang-python"><code>with open('example.txt', 'w') as file:
+file.write('This is a line of text.\n')
+                        </code></pre>
+                        <li><span>writelines()</span>
+                        Writes a list of strings to the file.</li>
+                        <h2>Example:</h2>
+                        <pre class="lang-python"><code>with open('example.txt', 'w') as file:
+lines = ['First line.\n', 'Second line.\n', 'Third line.\n']
+file.writelines(lines)
+                        </code></pre>
+
+                  </ul>
+                  <h2>Appending to a file</h2>
+                  <p>If you want to add content to the end of a file without overwriting it, you can open the file in append mode ('a'):</p>
+                  <h2>Example:</h2>
+                  <pre class="lang-python"><code>with open('example.txt', 'a') as file:
+file.write('This will be added to the end of the file.\n')
+                  </code></pre>
+                  <h2>Closing a file:</h2>
+                  <p>While Python automatically closes the file when using the with statement, you can also manually close a file using the close() method:</p>
+                  <pre class="lang-python"><code>file = open('example.txt', 'r')
+content = file.read()
+file.close()
+                  </code></pre>
+                  <h2>Working with binary files:</h2>
+                  <p>To read or write binary files (such as images or executables), use the 'b' mode:</p>
+                  <h2>Example:</h2>
+                  <pre class="lang-python"><code>with open('image.png', 'rb') as file:
+data = file.read()
+with open('new_image.png', 'wb') as file:
+file.write(data)
+                  </code></pre>
             <h2>Conclusion</h2>
-            Understanding how to declare variables properly is crucial for writing clean, maintainable, and error-free Python code. Choosing the right words based on the value of variables helps to maintain code and makes code more readable.
+            File handling in Python allows for efficient reading, writing, and appending to files using the open() function with different modes. The with statement ensures files are safely closed after operations, and exception handling prevents errors. This makes Python's file handling both simple and robust for managing data.
 
       </main>
       <script src="../common/common.js"></script>
