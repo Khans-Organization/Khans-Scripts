@@ -21,6 +21,8 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py17.html">Scope</a></li>
                 <li class="lists"><a class="anchors" href="py18.html">Closures</a></li>
                 <li class="lists"><a class="anchors" href="py19.html">Filing</a></li>
+                <li class="lists"><a class="anchors" href="py20.html">Decorators</a></li>
+
                 <li class="lists"><a class="anchors" </a></li>
                 <li class="lists"><a class="anchors" </a></li>            </ul>
       </div>`
