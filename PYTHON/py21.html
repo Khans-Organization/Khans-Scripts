@@ -17,11 +17,14 @@
 <body>
       <main>
             <h1>Exceptions in Python</h1>
-            <p>In Python, decorators are a design pattern that allows you to modify or extend the behavior of functions or methods without altering their original code. They are typically used to add functionality to an existing function in a clean, readable, and reusable way.</p>
+            <p>In Python, exceptions are errors that occur during the execution of a program, interrupting its normal flow. They provide a way to handle unexpected situations gracefully without crashing the entire program.</p>
 
-            <h2>Hoe decorators work?</h2>
-            <p>A decorator is a function that takes another function as input and returns a new function that adds some behavior to the original one. The @decorator_name syntax is used to apply a decorator to a function. Here's the basic structure of a decorator:</p> 
-            <h2>Syntax:</h2>
+            <h2>Types of Exceptions</h2>
+            <p>Python has several built-in exceptions, and users can also create custom exceptions. Common exceptions include:</p> 
+            <ul>
+                <li><span>Zero division error:</span>
+                Raised when division or modulo by zero occurs.</li>
+            </ul>
             <pre class="lang-python"><code>def decorator(func):
     def wrapper():
         # Code before the function call
