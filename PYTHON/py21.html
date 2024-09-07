@@ -31,48 +31,45 @@
                 <li><span>File Not Found Error:</span>
                 Raised when a file operation (like opening a file) fails because the file doesn't exist.</li>
             </ul>
-            <pre class="lang-python"><code>def decorator(func):
-    def wrapper():
-        # Code before the function call
-        func()  # Call the original function
-        # Code after the function call
-    return wrapper
+            <h2>Handling Exceptions:</h2>
+            <p>Exceptions can be handled using the try-except block. The code that might raise an exception is placed inside a try block, and the handling code is placed inside the except block.</p>
+            <h2>Example:</h2>
+            <pre class="lang-python"><code>try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except ValueError:
+    print("Invalid input! Please enter a valid number.")
             </code></pre>
             <h2>Explanation:</h2>
-                  <ul>
-                        <li><span>func:</span>The function being decorated.</li>
-                        <li><span>wrapper:</span>
-                            A new function that adds extra functionality before and/or after the original function is executed.</li>
-                  </ul>
-
-                  <h2>Applying a decorator:</h2>
-                  <p>You can apply a decorator to a function by placing the @decorator_name directly above the function definition:</p>
-                  <h2>Syntax:</h2>
-                  <pre class="lang-python"><code>@decorator
-def my_function():
-    print("This is my function.")
-my_function()
-                </code></pre>
-                <p>When my_function() is called, the decorator modifies its behavior by adding code before or after the original function's execution.</p>
-                <h2>Example:</h2>
-                <pre class="lang-python"><code>
-def greet_decorator(func):
-    def wrapper():
-        print("Hello!")
-        func()
-        print("Goodbye!")
-    return wrapper
-
-@greet_decorator
-def say_hello():
-    print("How are you?")
-
-say_hello()
+            <ul>
+                <li><span>try block:</span>
+                This block contains the code that may raise an exception.</li>
+                <li><span>except Value Error:</span>
+                If the user enters something that cannot be converted to an integer (e.g., entering text like "abc"), a ValueError is raised. </li>
+                This block catches the error and prints a message to let the user know that the input was invalid, asking them to enter a valid number. </li>
+                <li><span>except ZeroDivisionError:</span>
+                If the user enters 0, the program raises a ZeroDivisionError. This except block catches that specific exception and prints "Cannot divide by zero!" This prevents the program from crashing and informs the user of the issue.</li>
+            </ul>    
+            <h2>The "else" and "finally" clauses</h2>
+            <ul>
+                <li><span>else:</span>
+                Runs if no exception occurs.</li>
+                <li><span>finally:</span>
+                Runs regardless of whether an exception occurred or not.</li>
+            </ul>
+            <h2>Example:</h2>
+            <pre class="lang-python"><code>try:
+    f = open('example.txt', 'r')
+except FileNotFoundError:
+    print("File not found.")
+else:
+    print("File opened successfully.")
+finally:
+    print("This runs no matter what.")
 </code></pre>
-            <h2>Output:</h2>
-            <pre class="lang-python"><code>Hello!
-How are you?
-Goodbye!</code></pre>
+            <h2>Raising Exceptions:</h2>
             <p>In this example, the greet_decorator adds the "Hello!" and "Goodbye!" messages around the say_hello() function.</p>
             <h2>Decorators with arguments:</h2>
             <h2>Conclusion</h2>
