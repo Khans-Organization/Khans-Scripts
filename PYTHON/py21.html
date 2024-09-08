@@ -70,10 +70,15 @@ finally:
     print("This runs no matter what.")
 </code></pre>
             <h2>Raising Exceptions:</h2>
-            <p>In this example, the greet_decorator adds the "Hello!" and "Goodbye!" messages around the say_hello() function.</p>
-            <h2>Decorators with arguments:</h2>
+            <p>You can raise exceptions manually using the raise keyword.</p>
+            <h2>Example:</h2>
+            <pre class="lang-python"><code>x = -5
+if x < 0:
+    raise ValueError("Negative values are not allowed.")
+            </code></pre>
+            
             <h2>Conclusion</h2>
-            File handling in Python allows for efficient reading, writing, and appending to files using the open() function with different modes. The with statement ensures files are safely closed after operations, and exception handling prevents errors. This makes Python's file handling both simple and robust for managing data.
+            In Python, exceptions are errors encountered during program execution, managed using try-except blocks to handle specific issues without crashing the program. Common exceptions include ZeroDivisionError for division by zero and ValueError for invalid inputs. The else clause executes code if no exceptions occur, while the finally clause runs regardless of exceptions. Custom exceptions can be created to address unique application errors. This approach ensures robust error handling and improves user experience.
 
       </main>
       <script src="../common/common.js"></script>
