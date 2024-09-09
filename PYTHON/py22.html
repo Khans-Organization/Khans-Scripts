@@ -48,57 +48,36 @@ class Dog(Animal):
 dog = Dog("Buddy")
 print(dog.speak())  # Output: Buddy says Woof!
             </code></pre></li>
-                <li><span>File Not Found Error:</span>
-                Raised when a file operation (like opening a file) fails because the file doesn't exist.</li>
+                <li><span>Encapsulation:</span>
+                The concept of hiding internal data to protect it from unauthorized access. This is done by using private variables (preceded by a single underscore _ or double underscore __).
+            <pre class="lang-python"><code>class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute        
+    def deposit(self, amount):
+        self.__balance += amount        
+    def get_balance(self):
+        return self.__balance
+account = BankAccount(1000)
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+            </code></pre></li>
+            <li><span>Polymorphism:</span>
+            The ability of different classes to be treated as instances of the same class through inheritance, allowing methods to behave differently based on the object calling them.
+            <pre class="lang-python"><code>class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says Meow!"        
+    def animal_speak(animal):
+        print(animal.speak())
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+animal_speak(dog)  # Output: Buddy says Woof!
+animal_speak(cat)  # Output: Whiskers says Meow!
+            </code></pre></li>
+            <li><span>Abstarction:</span>
+            Hiding complex logic and exposing only the necessary parts. This is done using abstract classes and methods.</li>
             </ul>
-            <h2>Handling Exceptions:</h2>
-            <p>Exceptions can be handled using the try-except block. The code that might raise an exception is placed inside a try block, and the handling code is placed inside the except block.</p>
-            <h2>Example:</h2>
-            <pre class="lang-python"><code>try:
-    number = int(input("Enter a number: "))
-    result = 10 / number
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
-except ValueError:
-    print("Invalid input! Please enter a valid number.")
-            </code></pre>
-            <h2>Explanation:</h2>
-            <ul>
-                <li><span>try block:</span>
-                This block contains the code that may raise an exception.</li>
-                <li><span>except Value Error:</span>
-                If the user enters something that cannot be converted to an integer (e.g., entering text like "abc"), a ValueError is raised. </li>
-                This block catches the error and prints a message to let the user know that the input was invalid, asking them to enter a valid number. </li>
-                <li><span>except ZeroDivisionError:</span>
-                If the user enters 0, the program raises a ZeroDivisionError. This except block catches that specific exception and prints "Cannot divide by zero!" This prevents the program from crashing and informs the user of the issue.</li>
-            </ul>    
-            <h2>The "else" and "finally" clauses</h2>
-            <ul>
-                <li><span>else:</span>
-                Runs if no exception occurs.</li>
-                <li><span>finally:</span>
-                Runs regardless of whether an exception occurred or not.</li>
-            </ul>
-            <h2>Example:</h2>
-            <pre class="lang-python"><code>try:
-    f = open('example.txt', 'r')
-except FileNotFoundError:
-    print("File not found.")
-else:
-    print("File opened successfully.")
-finally:
-    print("This runs no matter what.")
-</code></pre>
-            <h2>Raising Exceptions:</h2>
-            <p>You can raise exceptions manually using the raise keyword.</p>
-            <h2>Example:</h2>
-            <pre class="lang-python"><code>x = -5
-if x < 0:
-    raise ValueError("Negative values are not allowed.")
-            </code></pre>
-            
             <h2>Conclusion</h2>
-            In Python, exceptions are errors encountered during program execution, managed using try-except blocks to handle specific issues without crashing the program. Common exceptions include ZeroDivisionError for division by zero and ValueError for invalid inputs. The else clause executes code if no exceptions occur, while the finally clause runs regardless of exceptions. Custom exceptions can be created to address unique application errors. This approach ensures robust error handling and improves user experience.
+            Object-Oriented Programming (OOP) in Python enhances code organization by structuring it around objects and classes. It promotes code reusability through inheritance and provides flexibility with polymorphism. Encapsulation ensures data protection, while abstraction simplifies complex functionalities. By applying OOP principles, Python programmers can write more modular, maintainable, and scalable code, making it easier to manage large projects.
 
       </main>
       <script src="../common/common.js"></script>
