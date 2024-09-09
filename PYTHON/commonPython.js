@@ -23,6 +23,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="py19.html">Filing</a></li>
                 <li class="lists"><a class="anchors" href="py20.html">Decorators</a></li>
                 <li class="lists"><a class="anchors" href="py21.html">Exception Handling</a></li>
+                <li class="lists"><a class="anchors" href="py22.html">OOP</a></li>
 
                 <li class="lists"><a class="anchors" </a></li>
                 <li class="lists"><a class="anchors" </a></li>            </ul>
