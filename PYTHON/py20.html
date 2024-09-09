@@ -66,8 +66,33 @@ How are you?
 Goodbye!</code></pre>
             <p>In this example, the greet_decorator adds the "Hello!" and "Goodbye!" messages around the say_hello() function.</p>
             <h2>Decorators with arguments:</h2>
+            <p>Decorators can also accept arguments. To do this, you add another layer of function nesting:</p>
+            <h2>Example:</h2>
+            <pre  class="lang-python"><code>def repeat(times):
+    def decorator(func):
+        def wrapper():
+            for _ in range(times):
+                func()
+            return wrapper
+    return decorator     
+@repeat(3)
+def say_hi():
+print("Hi!")
+say_hi()
+            </code></pre>
+            <h2>Use cases of decorators:</h2>
+            <ul>
+                <li><span>Logging:</span>
+                Track the execution of functions for debugging.</li>
+                <li><span>Access Control:</span>
+                Check user permissions before executing sensitive code.</li>
+                <li><span>Memorizing:</span>
+                Cache the results of expensive function calls for better performance.</li>
+                <li><span>Timing:</span>
+                Measure how long a function takes to execute.</li>
+            </ul>
             <h2>Conclusion</h2>
-            <p>File handling in Python allows for efficient reading, writing, and appending to files using the open() function with different modes. The with statement ensures files are safely closed after operations, and exception handling prevents errors. This makes Python's file handling both simple and robust for managing data.</p>
+            <p>Decorators in Python provide a powerful and flexible way to extend or modify the behavior of functions and methods without altering their original structure. By using decorators, you can keep your code modular, clean, and reusable, making it easier to maintain and scale.</p>
 
       </main>
       <script src="../common/common.js"></script>
