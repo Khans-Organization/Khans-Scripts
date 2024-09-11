@@ -31,6 +31,7 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="js27.html">XML HTTP Request</a></li>
                 <li class="lists"><a class="anchors" href="js28.html">CallBack Hell</a></li>
                 <li class="lists"><a class="anchors" href="js29.html">Promises</a></li>
+                <li class="lists"><a class="anchors" href="js30.html">Async/Await</a></li>
                 <li class="lists"><a class="anchors"></a></li>
                 <li class="lists"><a class="anchors"></a></li>
             </ul>

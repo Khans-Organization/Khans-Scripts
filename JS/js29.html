@@ -64,16 +64,16 @@
 });
 
 fetchData
-    .then((result) => {
-        console.log(result); // "Data fetched"
-        return "Processing data"; // Return new value to be used in the next then()
-    })
-    .then((nextResult) => {
-        console.log(nextResult); // "Processing data"
-    })
-    .catch((error) => {
-        console.log("Error:", error); // Handles any error in the promise chain
-    });</code></pre>
+.then((result) => {
+    console.log(result); // "Data fetched"
+    return "Processing data"; // Return new value to be used in the next then()
+})
+.then((nextResult) => {
+    console.log(nextResult); // "Processing data"
+})
+.catch((error) => {
+    console.log("Error:", error); // Handles any error in the promise chain
+});</code></pre>
         <p>In this example, the first promise resolves after 1 second, and its result is passed to the next "then()" block. If any of the promises in the chain are rejected, the "catch()" block handles the error.</p>
         
         <h2>5. Promise States</h2>
