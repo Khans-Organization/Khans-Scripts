@@ -71,7 +71,29 @@ for i in range(n, 0, -1):
 ***
 **
 *
-                        </code></pre>
+</code></pre>
+            </div>
+            <h1>Hour glass Pattern:</h1>
+            <pre class="lang-python"><code>n = int(input("Enter the number of rows: "))
+# Upper part
+for i in range(n, 0, -1):
+      print(' ' * (n - i) + '*' * (2 * i - 1))
+      # Lower part
+for i in range(2, n + 1):
+      print(' ' * (n - i) + '*' * (2 * i - 1))</code></pre>
+            </div>
+            <div class="output">
+                  <h1>Output:</h1>
+                  <pre class="lang-python"><code>*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********                  
+</code></pre>
             </div>
 
       </main>
