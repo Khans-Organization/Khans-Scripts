@@ -33,7 +33,7 @@ for j in range(lines - 1, 0, -1):
  ***
   *  </code></pre>
             </div>
-            <h1>Right-Angled Triangle</h1>
+            <h1>Right-Angled Triangle:</h1>
             <pre class="lang-python"><code>lines = int(input("Enter the number of lines: "))
 for i in range(1, lines + 1):
       print("*" * i)</code></pre>
@@ -43,6 +43,35 @@ for i in range(1, lines + 1):
                   <pre class="lang-python"><code>*
 **
 ***</code></pre>
+            </div>
+            <h1>Pyramid:</h1>
+            <pre class="lang-python"><code>n = int(input("Enter the number of rows: "))
+for i in range(n):
+      print(' ' * (n - i - 1) + '*' * (2 * i + 1))
+                  </code></pre>
+            </div>
+            <div class="output">
+                  <h1>Output:</h1>
+                  <pre class="lang-python"><code>     *
+    ***
+   *****
+  *******
+ *********</code></pre>
+            </div>
+            <h1>Inverted Pyramid:</h1>
+            <pre class="lang-python"><code>n = int(input("Enter the number of rows: "))
+for i in range(n, 0, -1):
+      print('*' * i)
+                  </code></pre>
+            </div>
+            <div class="output">
+                  <h1>Output:</h1>
+                  <pre class="lang-python"><code>*****
+****
+***
+**
+*
+                        </code></pre>
             </div>
 
       </main>
