@@ -1,7 +1,7 @@
 body, html {
       height: 100%; 
       margin: 0;
-      overflow: hidden; 
+      overflow: hidden;
 }
 *{
       margin: 0;
@@ -114,8 +114,11 @@ body, html {
       padding: 20px;
 }
     
+#section1 img, #section3 img{
+      margin-bottom: 200px;
+}
 #sec1,#sec3 {
-      margin: 80px 0 80px 185px;
+      margin: 80px 0 235px 185px;
 }
 #sec2 {
       margin-right: 185px;
@@ -124,10 +127,11 @@ body, html {
       width: 50vw;
 }
 .sections div h1{
+      padding-bottom: 20px;
       font-size: 48px;
 }
 .sections img{
-      width: 600px;
+      width: 400px;
 }
 .sections div p{
       font-size: 24px;
@@ -148,6 +152,9 @@ body, html {
       color: white;
       padding: 6px 10px 0px 10px;
       display: none;
+}
+.end {
+      margin-bottom: 200px;
 }
 
 @media screen and (max-width: 1170px) {
@@ -170,10 +177,10 @@ body, html {
             font-size: 36px;
       }
       .sections div p{
-            font-size: 22px;
+            font-size: 18px;
       }
       #sec1,#sec3 {
-            margin: 80px 0 80px 30px;
+            margin: 80px 0 235px 30px;
       }
       #sec2{
             margin-right:30px;
@@ -181,8 +188,14 @@ body, html {
 }
 
 @media screen and (max-width: 970px) {
+      #sec1,#sec3, #sec2 {
+            margin: 100px 0 0 0;
+      }
+      #section1 img, #section3 img{
+            margin-bottom: 0;
+      }
       .sections img{
-            width: 600px;
+            width: 500px;
       }
       #section1,#section3 {
             justify-content: flex-start;
@@ -195,20 +208,17 @@ body, html {
       .sections div {
             width: 80vw;
       }
-      #sec1,#sec3,#sec2 {
-            margin: 100px;
-      }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
       .sections img{
-            width: 350px;
+            width: 250px;
       }
       .sections div h1{
-            font-size: 32px;
+            font-size: 24px;
       }
       .sections div p{
-            font-size: 20px;
+            font-size: 14px;
       }
       .ul{
             flex-direction: column;
