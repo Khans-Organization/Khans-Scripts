@@ -1,4 +1,7 @@
-body, html {
+html, body {
+      overflow-x: hidden;
+}
+.noScroll, .noScroll {
       height: 100%; 
       margin: 0;
       overflow: hidden;
@@ -189,7 +192,7 @@ body, html {
 
 @media screen and (max-width: 970px) {
       #sec1,#sec3, #sec2 {
-            margin: 100px 0 0 0;
+            margin: 50px 0 0 0;
       }
       #section1 img, #section3 img{
             margin-bottom: 0;
