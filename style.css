@@ -110,7 +110,7 @@ body, html {
       scroll-snap-align: start; 
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 20px;
 }
     
@@ -167,10 +167,10 @@ body, html {
             display: inline;
       }
       .sections div h1{
-            font-size: 32px;
+            font-size: 36px;
       }
       .sections div p{
-            font-size: 18px;
+            font-size: 22px;
       }
       #sec1,#sec3 {
             margin: 80px 0 80px 30px;
@@ -182,12 +182,14 @@ body, html {
 
 @media screen and (max-width: 970px) {
       .sections img{
-            width: 400px;
+            width: 600px;
       }
       #section1,#section3 {
+            justify-content: flex-start;
             flex-direction: column;
       }
       #section2 {
+            justify-content: flex-end;
             flex-direction: column-reverse;
       }
       .sections div {
@@ -200,13 +202,13 @@ body, html {
 
 @media screen and (max-width: 500px) {
       .sections img{
-            width: 300px;
+            width: 350px;
       }
       .sections div h1{
-            font-size: 28px;
+            font-size: 32px;
       }
       .sections div p{
-            font-size: 14px;
+            font-size: 20px;
       }
       .ul{
             flex-direction: column;
