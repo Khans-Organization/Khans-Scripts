@@ -6,7 +6,7 @@ let common = `<div class="nav red">
             <nav>
                   <ul class="ul">
                         <li><a class="link navlinks" href="../index.html">Home</a></li>
-                        <li><a class="link navlinks" href="#">About Us</a></li>
+                        <li><a class="link navlinks" href="../about.html">About Us</a></li>
                         <li><button class="link navlinks btn red" id="btn1">Languages</button></li>
                   </ul>
             </nav>
@@ -19,7 +19,7 @@ let common = `<div class="nav red">
       <button id="close2" class="red"><span class="material-symbols-outlined">close</span></button>
             <ul class="ul">
                   <li><a class="link navlinks" href="../index.html">Home</a></li>
-                  <li><a class="link navlinks" href="#">About Us</a></li>
+                  <li><a class="link navlinks" href="../about.html">About Us</a></li>
                   <li><button class="link navlinks btn red" id="btn2">Languages</button></li>
             </ul>
       </nav>
