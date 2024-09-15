@@ -42,6 +42,8 @@
     font-size: 18px;
 }
 .organization {
+    color: black;
+    text-decoration-color: black;
     cursor: pointer;
 }
 .bold {
@@ -109,7 +111,7 @@
 }
 
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 340px) {
     .sections div h1{
         font-size: 20px;
   }
