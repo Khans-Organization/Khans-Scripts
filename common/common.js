@@ -6,7 +6,7 @@ let common = `<div class="nav red">
             <nav>
                   <ul class="ul">
                         <li><a class="link navlinks" href="../index.html">Home</a></li>
-                        <li><a class="link navlinks" href="#">About Us</a></li>
+                        <li><a class="link navlinks" href="../about.html">About Us</a></li>
                         <li><button class="link navlinks btn red" id="btn1">Languages</button></li>
                   </ul>
             </nav>
@@ -19,7 +19,7 @@ let common = `<div class="nav red">
       <button id="close2" class="red"><span class="material-symbols-outlined">close</span></button>
             <ul class="ul">
                   <li><a class="link navlinks" href="../index.html">Home</a></li>
-                  <li><a class="link navlinks" href="#">About Us</a></li>
+                  <li><a class="link navlinks" href="../about.html">About Us</a></li>
                   <li><button class="link navlinks btn red" id="btn2">Languages</button></li>
             </ul>
       </nav>
@@ -45,12 +45,17 @@ const langDiv = document.querySelector('.lang');
 const darkMode = document.querySelectorAll('.darkMode');
 const redElements = document.querySelectorAll('.red');
 const children = document.body.children;
+const members = document.body.querySelectorAll('.organization');
 
 // Checking for dark mode 
 if (JSON.parse(myStorage.getItem('val')) === 1) {
       document.body.classList.add('black');
       Array.from(children).forEach(child => {
             child.classList.add('white');
+      });
+      members.forEach(child => {
+            child.style.color = "white";
+            child.style.textDecorationColor = "white";
       });
       redElements.forEach(element => {
             darkMode.innerHTML = "Light Mode";
@@ -67,6 +72,15 @@ darkMode.forEach(button => {
             document.body.classList.toggle('black');
             Array.from(children).forEach(child => {
                   child.classList.toggle('white');
+            });
+            members.forEach((child) => {
+                  if (JSON.parse(myStorage.getItem('val')) === 0) {
+                        child.style.color = "white";
+                        child.style.textDecorationColor = "white";
+                  } else {
+                        child.style.color = "black";
+                        child.style.textDecorationColor = "black";
+                  }
             });
 
             redElements.forEach(element => {
