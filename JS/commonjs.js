@@ -33,7 +33,8 @@ let btn = `<button id="ham2" class="whiteBack"><span class="material-symbols-out
                 <li class="lists"><a class="anchors" href="js29.html">Promises</a></li>
                 <li class="lists"><a class="anchors" href="js30.html">Async/Await</a></li>
                 <li class="lists"><a class="anchors" href="js31.html">Fetch API</a></li>
-                <li class="lists"><a class="anchors" href="js30.html">Exceptions</a></li>
+                <li class="lists"><a class="anchors" href="js32.html">Exceptions</a></li>
+                <li class="lists"><a class="anchors" href="js33.html">Optional Chaining</a></li>
                 <li class="lists"><a class="anchors"></a></li>
                 <li class="lists"><a class="anchors"></a></li>
             </ul>
