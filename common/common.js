@@ -7,12 +7,12 @@ let common = `<div class="nav red">
                   <ul class="ul">
                         <li><a class="link navlinks" href="../index.html">Home</a></li>
                         <li><a class="link navlinks" href="../about.html">About Us</a></li>
-                        <li><button class="link navlinks btn red" id="btn1">Languages</button></li>
                   </ul>
             </nav>
             <button id="ham1" class="red"><span class="material-symbols-outlined">menu</span></button> 
       </div>
-      <button class="darkMode red">Dark Mode</button> 
+      <button class="link navlinks btn red" id="btn1">Languages</button>
+      <button class="darkMode red"><img src="../imgs/crescent.png"></button>
 </div>
 <div class="response red">
       <nav>
@@ -20,9 +20,9 @@ let common = `<div class="nav red">
             <ul class="ul">
                   <li><a class="link navlinks" href="../index.html">Home</a></li>
                   <li><a class="link navlinks" href="../about.html">About Us</a></li>
-                  <li><button class="link navlinks btn red" id="btn2">Languages</button></li>
             </ul>
       </nav>
+</div>
 <div class="lang above red">
       <ul>
             <button id="close3" class="red"><span class="material-symbols-outlined">close</span></button>
@@ -38,8 +38,7 @@ document.body.insertAdjacentHTML('afterbegin', common);
 const hamButton = document.querySelector('#ham1');
 const closeButton1 = document.querySelector('#close2');
 const closeButton2 = document.querySelector('#close3');
-const langButton1 = document.querySelector('#btn1');
-const langButton2 = document.querySelector('#btn2');
+const langButton = document.querySelector('#btn1');
 const responseDiv = document.querySelector('.response');
 const langDiv = document.querySelector('.lang');
 const darkMode = document.querySelectorAll('.darkMode');
@@ -58,12 +57,10 @@ if (JSON.parse(myStorage.getItem('val')) === 1) {
             child.style.textDecorationColor = "white";
       });
       redElements.forEach(element => {
-            darkMode.innerHTML = "Light Mode";
             element.classList.remove('red');
             element.classList.add('gray');
       })
 }
-
 
 
 // Dark mode toggle
@@ -86,34 +83,32 @@ darkMode.forEach(button => {
             redElements.forEach(element => {
                   if (element.classList.contains('red')) {
                         myStorage.setItem('val', 1);
-                        button.innerHTML = "Light Mode";
                         element.classList.remove('red');
                         element.classList.add('gray');
                   } else {
                         myStorage.setItem('val', 0);
-                        button.innerHTML = "Dark Mode";
                         element.classList.remove('gray');
                         element.classList.add('red');
                   }
             });
       });
 });
-// Toggle the navigation for mobile view
+// // Toggle the navigation for mobile view
 hamButton.addEventListener('click', () => {
       responseDiv.classList.add('below');
-      if (!langDiv.classList.contains('above')) {
-            langDiv.classList.remove('above');
+      if (!(langDiv.classList.contains('above'))) {
+            langDiv.classList.add('above');
       }
 });
 
 // Toggle language menu
-langButton1.addEventListener('click', () => {
+langButton.addEventListener('click', () => {
       langDiv.classList.remove('above');
+      if (!(responseDiv.classList.contains('above'))) {
+            responseDiv.classList.remove('below');
+      }
 });
 
-langButton2.addEventListener('click', () => {
-      langDiv.classList.remove('above');
-});
 
 closeButton1.addEventListener('click',()=>{
       responseDiv.classList.remove('below');
@@ -122,11 +117,8 @@ closeButton2.addEventListener('click',()=>{
       langDiv.classList.add('above');
 })
 
-// Adjust the navigation when resizing
-window.addEventListener('resize', () => {
-      if (document.body.offsetWidth > 1170) {
-            responseDiv.classList.remove('below');
-      }
-});
 
-
+if (window.outerWidth < 340){
+      document.querySelector('.btn').innerText = "Lang";
+      hamButton.style.marginRight = "10px";
+}
