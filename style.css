@@ -86,6 +86,7 @@ html, body {
       text-decoration: none;
 }
 .lang {
+      border-top: 2px solid white;
       padding: 20px 0;
       top: 60px;
       width: 100vw;
@@ -128,9 +129,6 @@ html, body {
       .nav nav {
             display: none;
       }
-      .lang {
-            border-top: 1px solid white;
-      }
       .img img {
             margin: auto;
             width: 80vw;
@@ -138,6 +136,9 @@ html, body {
        #ham1 {
             margin-right: 40px;
             display: inline;
+      }
+      .ul {
+            width: 3q00px;
       }
 }
 
