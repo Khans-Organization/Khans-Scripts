@@ -118,7 +118,3 @@ closeButton2.addEventListener('click',()=>{
 })
 
 
-if (window.outerWidth < 340){
-      document.querySelector('.btn').innerText = "Lang";
-      hamButton.style.marginRight = "10px";
-}

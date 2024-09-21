@@ -169,6 +169,15 @@ html, body {
       
 }
 
+@media screen and (max-width: 340px) {
+      .btn {
+            font-size: 12px;
+      }
+      #ham1{
+            margin-right: 10px;
+      }
+}
+
 .toolbar-item button {
       cursor: pointer !important;
       color: white !important;
