@@ -112,8 +112,7 @@ root.mainloop()
     return handlers
         
 for h in make_handlers():
-h()  # Output: 2 2 2
-        </code></pre>
+    h()  # Output: 2 2 2</code></pre>
         <h2>Solution:</h2>
         <p>By using i=i as a default argument in the handler function, each handler captures the value of i as it was during that iteration of the loop, thus printing the correct values (0, 1, 2).</p>
         <pre class="lang-python"><code>def make_handlers():
@@ -125,8 +124,7 @@ h()  # Output: 2 2 2
     return handlers
         
 for h in make_handlers():
-h()  # Output: 0 1 2
-        </code></pre>
+    h()  # Output: 0 1 2</code></pre>
         
         <h2>Conclusion</h2>
         <p>Closures are a powerful feature in Python that allow functions to retain access to their outer scope even after that scope has finished executing. They are essential for data Encapsulation, function factories, and many other advanced programming techniques. Understanding and leveraging closures can lead to more flexible and maintainable code.</p>

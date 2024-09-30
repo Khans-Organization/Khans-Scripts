@@ -11,7 +11,17 @@ let common = `<div class="nav red">
             </nav>
             <button id="ham1" class="red"><span class="material-symbols-outlined">menu</span></button> 
       </div>
-      <button class="link navlinks btn red" id="btn1">Languages</button>
+      <div style="position: relative">
+            <button class="link navlinks btn red" id="btn1">Languages</button>
+            <div class="lang1 above red">
+                  <ul>
+                        <button id="close3" class="red"><span class="material-symbols-outlined">close</span></button>
+                        <li class="li"><a class="link langlinks" href="../C/c1.html">C</a></li>
+                        <li class="li"><a class="link langlinks" href="../JS/js1.html">JavaScript</a></li>
+                        <li class="li"><a class="link langlinks" href="../PYTHON/py1.html">Python</a></li>
+                  </ul>
+            </div>
+      </div>
       <button class="darkMode red"><img src="../imgs/crescent.png"></button>
 </div>
 <div class="response red">
@@ -23,9 +33,9 @@ let common = `<div class="nav red">
             </ul>
       </nav>
 </div>
-<div class="lang above red">
+<div class="lang2 above red">
       <ul>
-            <button id="close3" class="red"><span class="material-symbols-outlined">close</span></button>
+            <button id="close4" class="red"><span class="material-symbols-outlined">close</span></button>
             <li class="li"><a class="link langlinks" href="../C/c1.html">C</a></li>
             <li class="li"><a class="link langlinks" href="../JS/js1.html">JavaScript</a></li>
             <li class="li"><a class="link langlinks" href="../PYTHON/py1.html">Python</a></li>
@@ -38,9 +48,11 @@ document.body.insertAdjacentHTML('afterbegin', common);
 const hamButton = document.querySelector('#ham1');
 const closeButton1 = document.querySelector('#close2');
 const closeButton2 = document.querySelector('#close3');
+const closeButton3 = document.querySelector('#close4');
 const langButton = document.querySelector('#btn1');
 const responseDiv = document.querySelector('.response');
-const langDiv = document.querySelector('.lang');
+const langDiv1 = document.querySelector('.lang1');
+const langDiv2 = document.querySelector('.lang2');
 const darkMode = document.querySelectorAll('.darkMode');
 const redElements = document.querySelectorAll('.red');
 const children = document.body.children;
@@ -96,14 +108,16 @@ darkMode.forEach(button => {
 // // Toggle the navigation for mobile view
 hamButton.addEventListener('click', () => {
       responseDiv.classList.add('below');
-      if (!(langDiv.classList.contains('above'))) {
-            langDiv.classList.add('above');
+      if (!((langDiv1.classList.contains('above')) || (langDiv2.classList.contains('above')))) {
+            langDiv1.classList.add('above');
+            langDiv2.classList.add('above');
       }
 });
 
 // Toggle language menu
 langButton.addEventListener('click', () => {
-      langDiv.classList.remove('above');
+      langDiv1.classList.remove('above');
+      langDiv2.classList.remove('above');
       if (!(responseDiv.classList.contains('above'))) {
             responseDiv.classList.remove('below');
       }
@@ -114,7 +128,10 @@ closeButton1.addEventListener('click',()=>{
       responseDiv.classList.remove('below');
 })
 closeButton2.addEventListener('click',()=>{
-      langDiv.classList.add('above');
+      langDiv1.classList.add('above');
+})
+closeButton3.addEventListener('click',()=>{
+      langDiv2.classList.add('above');
 })
 
 

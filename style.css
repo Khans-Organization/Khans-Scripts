@@ -63,7 +63,7 @@ html, body {
       width: 35px;
 }
 
-#close2 ,#close3 {    
+#close2 ,#close3, #close4 {    
       padding-top: 5px;
       right: 30px;
       position: absolute;
@@ -85,14 +85,25 @@ html, body {
       cursor: pointer;
       text-decoration: none;
 }
-.lang {
+.lang1 {
+      top: 52px;
+      left: -20%;
       border-top: 2px solid white;
       padding: 20px 0;
-      top: 60px;
+      width: 200px;
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+}
+.lang2 {
+      display: none;
+      top: 61px;
+      border-top: 2px solid white;
+      padding: 20px 0;
       width: 100vw;
       position: absolute;
       z-index: 2;
-      text-align: center;  
+      text-align: center;
 }
 .li {
       padding: 5px;
@@ -125,6 +136,7 @@ html, body {
       margin-bottom: 200px;
 }
 
+
 @media screen and (max-width: 1170px) {
       .nav nav {
             display: none;
@@ -143,6 +155,12 @@ html, body {
 }
 
 @media screen and (max-width: 550px) {
+      .lang1 {
+            display: none;
+      }
+      .lang2 {
+            display: block;
+      }
       .ul{
             width: 100vw;
             padding: 10px 0;
