@@ -7,7 +7,7 @@
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
-    padding: 100px;
+    padding: 70px;
 }
 .sections {
     height: 100vh;
